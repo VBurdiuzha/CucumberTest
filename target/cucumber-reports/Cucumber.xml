@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="3" tests="8" time="0.63829">
+<testcase classname="Operations with my credit card" name="I want withdraw money from my card" time="0.055132">
+<skipped><![CDATA[Given I have card 900.......................................................undefined
+When I want withdraw 300 money from my 900..................................undefined
+When I want get information about 600 money on card.........................undefined
+Then I want to get message about success....................................undefined
+]]></skipped>
+</testcase>
+<testcase classname="Operations with my credit card" name="I want withdraw money from my card 2" time="0.029483">
+<skipped><![CDATA[Given I have card 900.......................................................undefined
+When I want withdraw 500 money from my 900..................................undefined
+When I want get information about 400 money on card.........................undefined
+Then I want to get message about success....................................undefined
+]]></skipped>
+</testcase>
+<testcase classname="Operations with my credit card" name="I want withdraw money from my card 3" time="0.009983">
+<skipped><![CDATA[Given I have card 900.......................................................undefined
+When I want withdraw 999 money from my 900..................................undefined
+When I want get information about error money on card.......................undefined
+Then I want to get message about failed.....................................undefined
+]]></skipped>
+</testcase>
+<testcase classname="LoginFeature" name="Login with correct username and password" time="0.419387">
+<system-out><![CDATA[Given I navigate to the login page..........................................passed
+And I enter the data of person..............................................passed
+And I click login button....................................................passed
+Then I should see the form page.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline" time="0.04606">
+<system-out><![CDATA[Given I navigate to the login page..........................................passed
+And I enter the Bili and 1234567............................................passed
+And I click login button....................................................passed
+Then I should see the form page.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline 2" time="0.03817">
+<system-out><![CDATA[Given I navigate to the login page..........................................passed
+And I enter the Bobi and 7654321............................................passed
+And I click login button....................................................passed
+Then I should see the form page.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline 3" time="0.016027">
+<system-out><![CDATA[Given I navigate to the login page..........................................passed
+And I enter the Addi and 8888888............................................passed
+And I click login button....................................................passed
+Then I should see the form page.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline 4" time="0.024048">
+<system-out><![CDATA[Given I navigate to the login page..........................................passed
+And I enter the Puma and 7777777............................................passed
+And I click login button....................................................passed
+Then I should see the form page.............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
