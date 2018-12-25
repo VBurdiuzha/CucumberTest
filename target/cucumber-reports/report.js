@@ -1,7 +1,7 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/Features/CreditCard.feature");
 formatter.feature({
   "name": "Operations with my credit card",
-  "description": "  Some description for this feature",
+  "description": "  implementation with using DataTable",
   "keyword": "Feature",
   "tags": [
     {
@@ -114,7 +114,7 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "name": "Login with correct username and password",
+  "name": "Login with correct username and password (DataTable implementation)",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -187,7 +187,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenarioOutline({
-  "name": "Login with correct username and password using scenario outline",
+  "name": "Login with correct username and password using scenario outline  (Outline implementation)",
   "description": "",
   "keyword": "Scenario Outline"
 });
@@ -245,7 +245,7 @@ formatter.examples({
   ]
 });
 formatter.scenario({
-  "name": "Login with correct username and password using scenario outline",
+  "name": "Login with correct username and password using scenario outline  (Outline implementation)",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -298,7 +298,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Login with correct username and password using scenario outline",
+  "name": "Login with correct username and password using scenario outline  (Outline implementation)",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -351,7 +351,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Login with correct username and password using scenario outline",
+  "name": "Login with correct username and password using scenario outline  (Outline implementation)",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -404,7 +404,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Login with correct username and password using scenario outline",
+  "name": "Login with correct username and password using scenario outline  (Outline implementation)",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [

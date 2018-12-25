@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 354157365,
+              "duration": 347308142,
               "status": "passed"
             },
             "line": 7,
@@ -58,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 652866,
+              "duration": 628797,
               "status": "passed"
             },
             "line": 13,
@@ -70,7 +70,7 @@
           },
           {
             "result": {
-              "duration": 544544,
+              "duration": 615650,
               "status": "passed"
             },
             "line": 14,
@@ -82,7 +82,7 @@
           },
           {
             "result": {
-              "duration": 523750,
+              "duration": 605480,
               "status": "passed"
             },
             "line": 15,
@@ -104,7 +104,7 @@
       }
     ],
     "name": "Operations with my credit card",
-    "description": "  Some description for this feature",
+    "description": "  implementation with using DataTable",
     "id": "operations-with-my-credit-card",
     "keyword": "Feature",
     "uri": "src/test/java/Features/CreditCard.feature",
@@ -132,15 +132,15 @@
     "elements": [
       {
         "line": 5,
-        "name": "Login with correct username and password",
+        "name": "Login with correct username and password (DataTable implementation)",
         "description": "",
-        "id": "loginfeature;login-with-correct-username-and-password",
+        "id": "loginfeature;login-with-correct-username-and-password-(datatable-implementation)",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 2861742,
+              "duration": 455187,
               "status": "passed"
             },
             "line": 6,
@@ -152,7 +152,7 @@
           },
           {
             "result": {
-              "duration": 11710690,
+              "duration": 7762358,
               "status": "passed"
             },
             "line": 7,
@@ -184,7 +184,7 @@
           },
           {
             "result": {
-              "duration": 683868,
+              "duration": 416969,
               "status": "passed"
             },
             "line": 12,
@@ -196,7 +196,7 @@
           },
           {
             "result": {
-              "duration": 430350,
+              "duration": 752748,
               "status": "passed"
             },
             "line": 13,
@@ -218,15 +218,15 @@
       },
       {
         "line": 23,
-        "name": "Login with correct username and password using scenario outline",
+        "name": "Login with correct username and password using scenario outline  (Outline implementation)",
         "description": "",
-        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline;;2",
+        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline--(outline-implementation);;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 538881,
+              "duration": 410705,
               "status": "passed"
             },
             "line": 16,
@@ -238,7 +238,7 @@
           },
           {
             "result": {
-              "duration": 636358,
+              "duration": 552688,
               "status": "passed"
             },
             "line": 17,
@@ -260,7 +260,7 @@
           },
           {
             "result": {
-              "duration": 560672,
+              "duration": 477341,
               "status": "passed"
             },
             "line": 18,
@@ -272,7 +272,7 @@
           },
           {
             "result": {
-              "duration": 425441,
+              "duration": 1684796,
               "status": "passed"
             },
             "line": 19,
@@ -294,15 +294,15 @@
       },
       {
         "line": 24,
-        "name": "Login with correct username and password using scenario outline",
+        "name": "Login with correct username and password using scenario outline  (Outline implementation)",
         "description": "",
-        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline;;3",
+        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline--(outline-implementation);;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1664079,
+              "duration": 16884850,
               "status": "passed"
             },
             "line": 16,
@@ -314,7 +314,7 @@
           },
           {
             "result": {
-              "duration": 410393,
+              "duration": 569197,
               "status": "passed"
             },
             "line": 17,
@@ -336,7 +336,7 @@
           },
           {
             "result": {
-              "duration": 4061786,
+              "duration": 383915,
               "status": "passed"
             },
             "line": 18,
@@ -348,7 +348,7 @@
           },
           {
             "result": {
-              "duration": 380174,
+              "duration": 20382238,
               "status": "passed"
             },
             "line": 19,
@@ -370,15 +370,15 @@
       },
       {
         "line": 25,
-        "name": "Login with correct username and password using scenario outline",
+        "name": "Login with correct username and password using scenario outline  (Outline implementation)",
         "description": "",
-        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline;;4",
+        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline--(outline-implementation);;4",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1293380,
+              "duration": 618424,
               "status": "passed"
             },
             "line": 16,
@@ -390,7 +390,7 @@
           },
           {
             "result": {
-              "duration": 440509,
+              "duration": 454381,
               "status": "passed"
             },
             "line": 17,
@@ -412,7 +412,7 @@
           },
           {
             "result": {
-              "duration": 332767,
+              "duration": 2313203,
               "status": "passed"
             },
             "line": 18,
@@ -424,7 +424,7 @@
           },
           {
             "result": {
-              "duration": 7365556,
+              "duration": 1377630,
               "status": "passed"
             },
             "line": 19,
@@ -446,15 +446,15 @@
       },
       {
         "line": 26,
-        "name": "Login with correct username and password using scenario outline",
+        "name": "Login with correct username and password using scenario outline  (Outline implementation)",
         "description": "",
-        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline;;5",
+        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline--(outline-implementation);;5",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 906574,
+              "duration": 296473,
               "status": "passed"
             },
             "line": 16,
@@ -466,7 +466,7 @@
           },
           {
             "result": {
-              "duration": 2263469,
+              "duration": 395227,
               "status": "passed"
             },
             "line": 17,
@@ -488,7 +488,7 @@
           },
           {
             "result": {
-              "duration": 383064,
+              "duration": 287216,
               "status": "passed"
             },
             "line": 18,
@@ -500,7 +500,7 @@
           },
           {
             "result": {
-              "duration": 4664252,
+              "duration": 313145,
               "status": "passed"
             },
             "line": 19,

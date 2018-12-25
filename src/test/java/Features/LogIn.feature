@@ -2,7 +2,7 @@
 Feature: LoginFeature
   Some description for this feature
 
-  Scenario: Login with correct username and password
+  Scenario: Login with correct username and password (DataTable implementation)
     Given I navigate to the login page
     And I enter the data of person
     |username|password|
@@ -12,7 +12,7 @@ Feature: LoginFeature
     And I click login button
     Then I should see the form page
 
-  Scenario Outline: Login with correct username and password using scenario outline
+  Scenario Outline: Login with correct username and password using scenario outline  (Outline implementation)
     Given I navigate to the login page
     And I enter the <username> and <password>
     And I click login button

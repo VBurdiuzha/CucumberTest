@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="6" time="0.582591">
-<testcase classname="Operations with my credit card" name="I want withdraw money from my card" time="0.40531">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="6" time="0.633275">
+<testcase classname="Operations with my credit card" name="I want withdraw money from my card" time="0.405161">
 <system-out><![CDATA[Given I have card balance...................................................passed
 When I want withdraw withdraw money from my balance.........................passed
 When I want get information about current money on card.....................passed
 Then I want to get message about operation..................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="LoginFeature" name="Login with correct username and password" time="0.044048">
+<testcase classname="LoginFeature" name="Login with correct username and password (DataTable implementation)" time="0.061857">
 <system-out><![CDATA[Given I navigate to the login page..........................................passed
 And I enter the data of person..............................................passed
 And I click login button....................................................passed
 Then I should see the form page.............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline" time="0.037879">
+<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation)" time="0.048887">
 <system-out><![CDATA[Given I navigate to the login page..........................................passed
 And I enter the Bili and 1234567............................................passed
 And I click login button....................................................passed
 Then I should see the form page.............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline 2" time="0.030519">
+<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation) 2" time="0.063352">
 <system-out><![CDATA[Given I navigate to the login page..........................................passed
 And I enter the Bobi and 7654321............................................passed
 And I click login button....................................................passed
 Then I should see the form page.............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline 3" time="0.030526">
+<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation) 3" time="0.030643">
 <system-out><![CDATA[Given I navigate to the login page..........................................passed
 And I enter the Addi and 8888888............................................passed
 And I click login button....................................................passed
 Then I should see the form page.............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline 4" time="0.034309">
+<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation) 4" time="0.023375">
 <system-out><![CDATA[Given I navigate to the login page..........................................passed
 And I enter the Puma and 7777777............................................passed
 And I click login button....................................................passed
