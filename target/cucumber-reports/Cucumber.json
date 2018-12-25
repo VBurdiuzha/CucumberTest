@@ -3,155 +3,93 @@
     "line": 3,
     "elements": [
       {
-        "line": 14,
+        "line": 6,
         "name": "I want withdraw money from my card",
         "description": "",
-        "id": "operations-with-my-credit-card;i-want-withdraw-money-from-my-card;;2",
+        "id": "operations-with-my-credit-card;i-want-withdraw-money-from-my-card",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 354157365,
+              "status": "passed"
             },
             "line": 7,
-            "name": "I have card 900",
-            "match": {},
+            "name": "I have card balance",
+            "match": {
+              "location": "CreditCardGlue.iHaveCardBalance(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "balance",
+                  "withdraw",
+                  "current",
+                  "operation"
+                ]
+              },
+              {
+                "cells": [
+                  "900",
+                  "300",
+                  "600",
+                  "success"
+                ]
+              },
+              {
+                "cells": [
+                  "900",
+                  "500",
+                  "400",
+                  "success"
+                ]
+              },
+              {
+                "cells": [
+                  "900",
+                  "999",
+                  "error",
+                  "failed"
+                ]
+              }
+            ],
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 652866,
+              "status": "passed"
             },
-            "line": 8,
-            "name": "I want withdraw 300 money from my 900",
-            "match": {},
+            "line": 13,
+            "name": "I want withdraw withdraw money from my balance",
+            "match": {
+              "location": "CreditCardGlue.iWantGetInformationAboutCurrentMoneyOnCard()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 544544,
+              "status": "passed"
             },
-            "line": 9,
-            "name": "I want get information about 600 money on card",
-            "match": {},
+            "line": 14,
+            "name": "I want get information about current money on card",
+            "match": {
+              "location": "CreditCardGlue.iWantWithdrawMoneyFromMyBalance()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 523750,
+              "status": "passed"
             },
-            "line": 10,
-            "name": "I want to get message about success",
-            "match": {},
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@CreditCard"
-          },
-          {
-            "name": "@Login"
-          }
-        ]
-      },
-      {
-        "line": 15,
-        "name": "I want withdraw money from my card",
-        "description": "",
-        "id": "operations-with-my-credit-card;i-want-withdraw-money-from-my-card;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "status": "undefined"
+            "line": 15,
+            "name": "I want to get message about operation",
+            "match": {
+              "location": "CreditCardGlue.iWantToGetMessageAboutOperation()"
             },
-            "line": 7,
-            "name": "I have card 900",
-            "match": {},
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 8,
-            "name": "I want withdraw 500 money from my 900",
-            "match": {},
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 9,
-            "name": "I want get information about 400 money on card",
-            "match": {},
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 10,
-            "name": "I want to get message about success",
-            "match": {},
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@CreditCard"
-          },
-          {
-            "name": "@Login"
-          }
-        ]
-      },
-      {
-        "line": 16,
-        "name": "I want withdraw money from my card",
-        "description": "",
-        "id": "operations-with-my-credit-card;i-want-withdraw-money-from-my-card;;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 7,
-            "name": "I have card 900",
-            "match": {},
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 8,
-            "name": "I want withdraw 999 money from my 900",
-            "match": {},
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 9,
-            "name": "I want get information about error money on card",
-            "match": {},
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "undefined"
-            },
-            "line": 10,
-            "name": "I want to get message about failed",
-            "match": {},
             "keyword": "Then "
           }
         ],
@@ -166,7 +104,7 @@
       }
     ],
     "name": "Operations with my credit card",
-    "description": "    Some description for this feature",
+    "description": "  Some description for this feature",
     "id": "operations-with-my-credit-card",
     "keyword": "Feature",
     "uri": "src/test/java/Features/CreditCard.feature",
@@ -202,7 +140,7 @@
         "steps": [
           {
             "result": {
-              "duration": 371977914,
+              "duration": 2861742,
               "status": "passed"
             },
             "line": 6,
@@ -214,7 +152,7 @@
           },
           {
             "result": {
-              "duration": 20984304,
+              "duration": 11710690,
               "status": "passed"
             },
             "line": 7,
@@ -246,7 +184,7 @@
           },
           {
             "result": {
-              "duration": 389083,
+              "duration": 683868,
               "status": "passed"
             },
             "line": 12,
@@ -258,7 +196,7 @@
           },
           {
             "result": {
-              "duration": 376074,
+              "duration": 430350,
               "status": "passed"
             },
             "line": 13,
@@ -288,7 +226,7 @@
         "steps": [
           {
             "result": {
-              "duration": 371617,
+              "duration": 538881,
               "status": "passed"
             },
             "line": 16,
@@ -300,7 +238,7 @@
           },
           {
             "result": {
-              "duration": 7869631,
+              "duration": 636358,
               "status": "passed"
             },
             "line": 17,
@@ -322,7 +260,7 @@
           },
           {
             "result": {
-              "duration": 405555,
+              "duration": 560672,
               "status": "passed"
             },
             "line": 18,
@@ -334,7 +272,7 @@
           },
           {
             "result": {
-              "duration": 378359,
+              "duration": 425441,
               "status": "passed"
             },
             "line": 19,
@@ -364,7 +302,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2400527,
+              "duration": 1664079,
               "status": "passed"
             },
             "line": 16,
@@ -376,7 +314,7 @@
           },
           {
             "result": {
-              "duration": 4088849,
+              "duration": 410393,
               "status": "passed"
             },
             "line": 17,
@@ -398,7 +336,7 @@
           },
           {
             "result": {
-              "duration": 709220,
+              "duration": 4061786,
               "status": "passed"
             },
             "line": 18,
@@ -410,7 +348,7 @@
           },
           {
             "result": {
-              "duration": 935213,
+              "duration": 380174,
               "status": "passed"
             },
             "line": 19,
@@ -440,7 +378,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1843007,
+              "duration": 1293380,
               "status": "passed"
             },
             "line": 16,
@@ -452,7 +390,7 @@
           },
           {
             "result": {
-              "duration": 837615,
+              "duration": 440509,
               "status": "passed"
             },
             "line": 17,
@@ -474,7 +412,7 @@
           },
           {
             "result": {
-              "duration": 423137,
+              "duration": 332767,
               "status": "passed"
             },
             "line": 18,
@@ -486,7 +424,7 @@
           },
           {
             "result": {
-              "duration": 917620,
+              "duration": 7365556,
               "status": "passed"
             },
             "line": 19,
@@ -516,7 +454,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2126293,
+              "duration": 906574,
               "status": "passed"
             },
             "line": 16,
@@ -528,7 +466,7 @@
           },
           {
             "result": {
-              "duration": 2340120,
+              "duration": 2263469,
               "status": "passed"
             },
             "line": 17,
@@ -550,7 +488,7 @@
           },
           {
             "result": {
-              "duration": 626591,
+              "duration": 383064,
               "status": "passed"
             },
             "line": 18,
@@ -562,7 +500,7 @@
           },
           {
             "result": {
-              "duration": 1358473,
+              "duration": 4664252,
               "status": "passed"
             },
             "line": 19,

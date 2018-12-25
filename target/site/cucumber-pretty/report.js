@@ -1,7 +1,7 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/Features/CreditCard.feature");
 formatter.feature({
   "name": "Operations with my credit card",
-  "description": "    Some description for this feature",
+  "description": "  Some description for this feature",
   "keyword": "Feature",
   "tags": [
     {
@@ -12,31 +12,21 @@ formatter.feature({
     }
   ]
 });
-formatter.scenarioOutline({
+formatter.scenario({
   "name": "I want withdraw money from my card",
   "description": "",
-  "keyword": "Scenario Outline"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@CreditCard"
+    },
+    {
+      "name": "@Login"
+    }
+  ]
 });
 formatter.step({
-  "name": "I have card \u003cbalance\u003e",
-  "keyword": "Given "
-});
-formatter.step({
-  "name": "I want withdraw \u003cwithdraw\u003e money from my \u003cbalance\u003e",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "I want get information about \u003ccurrent\u003e money on card",
-  "keyword": "When "
-});
-formatter.step({
-  "name": "I want to get message about \u003coperation\u003e",
-  "keyword": "Then "
-});
-formatter.examples({
-  "name": "",
-  "description": "",
-  "keyword": "Examples",
+  "name": "I have card balance",
   "rows": [
     {
       "cells": [
@@ -70,142 +60,44 @@ formatter.examples({
         "failed"
       ]
     }
-  ]
-});
-formatter.scenario({
-  "name": "I want withdraw money from my card",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@CreditCard"
-    },
-    {
-      "name": "@Login"
-    }
-  ]
-});
-formatter.step({
-  "name": "I have card 900",
+  ],
   "keyword": "Given "
 });
-formatter.match({});
+formatter.match({
+  "location": "CreditCardGlue.iHaveCardBalance(DataTable)"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "I want withdraw 300 money from my 900",
+  "name": "I want withdraw withdraw money from my balance",
   "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "CreditCardGlue.iWantGetInformationAboutCurrentMoneyOnCard()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "I want get information about 600 money on card",
+  "name": "I want get information about current money on card",
   "keyword": "When "
 });
-formatter.match({});
+formatter.match({
+  "location": "CreditCardGlue.iWantWithdrawMoneyFromMyBalance()"
+});
 formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.step({
-  "name": "I want to get message about success",
+  "name": "I want to get message about operation",
   "keyword": "Then "
 });
-formatter.match({});
+formatter.match({
+  "location": "CreditCardGlue.iWantToGetMessageAboutOperation()"
+});
 formatter.result({
-  "status": "undefined"
-});
-formatter.scenario({
-  "name": "I want withdraw money from my card",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@CreditCard"
-    },
-    {
-      "name": "@Login"
-    }
-  ]
-});
-formatter.step({
-  "name": "I have card 900",
-  "keyword": "Given "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "I want withdraw 500 money from my 900",
-  "keyword": "When "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "I want get information about 400 money on card",
-  "keyword": "When "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "I want to get message about success",
-  "keyword": "Then "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.scenario({
-  "name": "I want withdraw money from my card",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@CreditCard"
-    },
-    {
-      "name": "@Login"
-    }
-  ]
-});
-formatter.step({
-  "name": "I have card 900",
-  "keyword": "Given "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "I want withdraw 999 money from my 900",
-  "keyword": "When "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "I want get information about error money on card",
-  "keyword": "When "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
-});
-formatter.step({
-  "name": "I want to get message about failed",
-  "keyword": "Then "
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
+  "status": "passed"
 });
 formatter.uri("src/test/java/Features/LogIn.feature");
 formatter.feature({

@@ -22,14 +22,14 @@ public class LoginGlue  {
     }
 
 
-    static class User{
+     class User{
         private String username;
         private String password;
 
         public User(String userName, String passWord){
             // create constructors
-            username = userName;
-            password = passWord;
+            this.username = userName;
+            this.password = passWord;
         }
     }
 

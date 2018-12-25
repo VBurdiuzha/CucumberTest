@@ -11,7 +11,9 @@ import java.util.List;
 
 public class CreditCardGlue implements En {
 
-    static class cardInfo {
+    private static List<cardInfo> cards = new ArrayList<cardInfo>();
+
+    class cardInfo {
         private String balance = null;
         private String withdraw = null;
         private String current = null;
@@ -24,53 +26,44 @@ public class CreditCardGlue implements En {
             this.operation = operation;
         }
 
+    }
 
-        @Given("^I have card ([^\"]*)$")
-        public void iHaveCardBalance(DataTable table) throws  Throwable {
 
-            List<cardInfo> cards = new ArrayList<cardInfo>();
-            cards = table.asList(cardInfo.class);
+    @Given("^I have card balance$")
+    public void iHaveCardBalance(DataTable table){
 
-            for (cardInfo info : cards) {
-                System.out.println("There are " + info.balance + " money on my balance");
-            }
+        cards = table.asList(cardInfo.class);
 
+        for (cardInfo info : cards) {
+            System.out.println("There are " + info.balance + " money on my balance");
+        }
+    }
+
+
+    @When("^I want withdraw withdraw money from my balance$")
+    public void iWantGetInformationAboutCurrentMoneyOnCard() {
+
+        for (cardInfo info : cards) {
+            System.out.println("Left " + info.balance + " money on my balance");
+        }
+    }
+
+    @When("^I want get information about current money on card$")
+    public void iWantWithdrawMoneyFromMyBalance() {
+
+
+        for (cardInfo info : cards) {
+            System.out.println(" There are " + info.withdraw + " will be withdraw");
 
         }
+    }
+
+    @Then("^I want to get message about operation$")
+    public void iWantToGetMessageAboutOperation() {
 
 
-        @When("^I want get information about ([^\"]*) money on card$")
-        public void iWantGetInformationAboutCurrentMoneyOnCard(DataTable table) {
-            List<cardInfo> cards = new ArrayList<cardInfo>();
-            cards = table.asList(cardInfo.class);
-
-
-            for (CreditCardGlue.cardInfo info : cards) {
-                System.out.println("Left " + info.balance + " money on my balance");
-            }
-        }
-
-        @When("^I want withdraw ([^\"]*) money from my ([^\"]*)$")
-        public void iWantWithdrawMoneyFromMyBalance(DataTable table) {
-
-            List<cardInfo> cards = new ArrayList<cardInfo>();
-            cards = table.asList(cardInfo.class);
-
-            for (CreditCardGlue.cardInfo info : cards) {
-                System.out.println(" There are " + info.withdraw + " will be withdraw");
-
-            }
-        }
-
-        @Then("^I want to get message about ([^\"]*)$")
-        public void iWantToGetMessageAboutOperation(DataTable table) {
-
-            List<cardInfo> cards = new ArrayList<cardInfo>();
-            cards = table.asList(cardInfo.class);
-
-            for (cardInfo info : cards) {
-                System.out.println("Operation done " + info.operation);
-            }
+        for (cardInfo info : cards) {
+            System.out.println("Operation done " + info.operation);
         }
     }
 }
