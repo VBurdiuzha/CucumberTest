@@ -14,10 +14,10 @@ public class CreditCardGlue implements En {
     private static List<cardInfo> cards = new ArrayList<cardInfo>();
 
     class cardInfo {
-        private String balance = null;
-        private String withdraw = null;
-        private String current = null;
-        private String operation = null;
+        private String balance;
+        private String withdraw;
+        private String current;
+        private String operation;
 
         public cardInfo(String balance, String withdraw, String current, String operation) {
             this.balance = balance;
@@ -25,9 +25,7 @@ public class CreditCardGlue implements En {
             this.current = current;
             this.operation = operation;
         }
-
     }
-
 
     @Given("^I have card balance$")
     public void iHaveCardBalance(DataTable table){
@@ -42,7 +40,6 @@ public class CreditCardGlue implements En {
 
     @When("^I want withdraw withdraw money from my balance$")
     public void iWantGetInformationAboutCurrentMoneyOnCard() {
-
         for (cardInfo info : cards) {
             System.out.println("Left " + info.balance + " money on my balance");
         }
@@ -50,18 +47,13 @@ public class CreditCardGlue implements En {
 
     @When("^I want get information about current money on card$")
     public void iWantWithdrawMoneyFromMyBalance() {
-
-
         for (cardInfo info : cards) {
             System.out.println(" There are " + info.withdraw + " will be withdraw");
-
         }
     }
 
     @Then("^I want to get message about operation$")
     public void iWantToGetMessageAboutOperation() {
-
-
         for (cardInfo info : cards) {
             System.out.println("Operation done " + info.operation);
         }

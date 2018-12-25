@@ -1,7 +1,7 @@
 @CreditCard @Login
 
 Feature: Operations with my credit card
-  Some description for this feature
+  implementation with using DataTable
 
   Scenario: I want withdraw money from my card
     Given I have card balance
