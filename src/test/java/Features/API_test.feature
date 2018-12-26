@@ -6,6 +6,6 @@
       Then I should get status <code> and <rule>
 
       Examples:
-        | rule     |  | code |
-        | request1 |  | 200  |
-        | request2 |  | 200  |
+        | rule  |  | code |
+        | Rule1 |  | 200  |
+        | Rule2 |  | 200  |

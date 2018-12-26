@@ -36,14 +36,14 @@ formatter.examples({
     },
     {
       "cells": [
-        "request1",
+        "Rule1",
         "",
         "200"
       ]
     },
     {
       "cells": [
-        "request2",
+        "Rule2",
         "",
         "200"
       ]
@@ -51,7 +51,7 @@ formatter.examples({
   ]
 });
 formatter.scenario({
-  "name": "Create request1 for service",
+  "name": "Create Rule1 for service",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -61,28 +61,28 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "I send request with request1 to the service",
+  "name": "I send request with Rule1 to the service",
   "keyword": "When "
 });
 formatter.match({
   "location": "API_testGlue.java:38"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: Cannot find file by path: null\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat util.UtilMethods.getFile(UtilMethods.java:15)\n\tat Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)\n\tat ✽.I send request with request1 to the service(src/test/java/Features/API_test.feature:5)\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
-  "name": "I should get status 200 and request1",
+  "name": "I should get status 200 and Rule1",
   "keyword": "Then "
 });
 formatter.match({
   "location": "API_testGlue.java:44"
 });
 formatter.result({
-  "status": "skipped"
+  "error_message": "java.lang.AssertionError: expected:\u003c200\u003e but was:\u003c400\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat Glue.API_testGlue.lambda$new$1(API_testGlue.java:54)\n\tat ✽.I should get status 200 and Rule1(src/test/java/Features/API_test.feature:6)\n",
+  "status": "failed"
 });
 formatter.scenario({
-  "name": "Create request2 for service",
+  "name": "Create Rule2 for service",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
@@ -92,24 +92,24 @@ formatter.scenario({
   ]
 });
 formatter.step({
-  "name": "I send request with request2 to the service",
+  "name": "I send request with Rule2 to the service",
   "keyword": "When "
 });
 formatter.match({
   "location": "API_testGlue.java:38"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: Cannot find file by path: null\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat util.UtilMethods.getFile(UtilMethods.java:15)\n\tat Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)\n\tat ✽.I send request with request2 to the service(src/test/java/Features/API_test.feature:5)\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
-  "name": "I should get status 200 and request2",
+  "name": "I should get status 200 and Rule2",
   "keyword": "Then "
 });
 formatter.match({
   "location": "API_testGlue.java:44"
 });
 formatter.result({
-  "status": "skipped"
+  "error_message": "java.lang.AssertionError: expected:\u003c200\u003e but was:\u003c400\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat Glue.API_testGlue.lambda$new$1(API_testGlue.java:54)\n\tat ✽.I should get status 200 and Rule2(src/test/java/Features/API_test.feature:6)\n",
+  "status": "failed"
 });
 });

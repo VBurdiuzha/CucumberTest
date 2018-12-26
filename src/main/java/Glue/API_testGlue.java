@@ -29,11 +29,11 @@ public class API_testGlue implements En,Depot {
     private static HashMap<String, String> responseList = new HashMap<String, String>();
 
     public API_testGlue(){
-        postdataList.put("Rule1","/src/test/resources/TestData/testData1.json");
-        postdataList.put("Rule2","/src/test/resources/TestData/testData2.json");
+        postdataList.put("Rule1","ResponseData/ResponseData1.json");
+        postdataList.put("Rule2","ResponseData/ResponseData2.json");
 
-        responseList.put("Rule1","/src/test/resources/ResponseData/ResponseData1.json");
-        responseList.put("Rule2","/src/test/resources/ResponseData/ResponseData2.json");
+        responseList.put("Rule1","TestData/testData1.json");
+        responseList.put("Rule2","TestData/testData2.json");
 
         When("I send request with (.*) to the service", (String name) -> {
           httpResponse = Request.Post(url)

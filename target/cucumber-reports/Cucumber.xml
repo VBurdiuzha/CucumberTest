@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="0.407475">
-<testcase classname="API test for creating a few rules for redirect service" name="Create request1 for service" time="0.373211">
-<failure message="java.lang.AssertionError: Cannot find file by path: null&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#10;&#9;at util.UtilMethods.getFile(UtilMethods.java:15)&#10;&#9;at Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)&#10;&#9;at ✽.I send request with request1 to the service(src/test/java/Features/API_test.feature:5)&#10;"><![CDATA[When I send request with request1 to the service............................failed
-Then I should get status 200 and request1...................................skipped
+<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="3.084059">
+<testcase classname="API test for creating a few rules for redirect service" name="Create Rule1 for service" time="2.999842">
+<failure message="java.lang.AssertionError: expected:&lt;200&gt; but was:&lt;400&gt;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.failNotEquals(Assert.java:743)&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:118)&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:555)&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:542)&#10;&#9;at Glue.API_testGlue.lambda$new$1(API_testGlue.java:54)&#10;&#9;at ✽.I should get status 200 and Rule1(src/test/java/Features/API_test.feature:6)&#10;"><![CDATA[When I send request with Rule1 to the service...............................passed
+Then I should get status 200 and Rule1......................................failed
 
 StackTrace:
-java.lang.AssertionError: Cannot find file by path: null
+java.lang.AssertionError: expected:<200> but was:<400>
 	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at util.UtilMethods.getFile(UtilMethods.java:15)
-	at Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)
-	at ✽.I send request with request1 to the service(src/test/java/Features/API_test.feature:5)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:542)
+	at Glue.API_testGlue.lambda$new$1(API_testGlue.java:54)
+	at ✽.I should get status 200 and Rule1(src/test/java/Features/API_test.feature:6)
 ]]></failure>
 </testcase>
-<testcase classname="API test for creating a few rules for redirect service" name="Create request2 for service" time="0.034264">
-<failure message="java.lang.AssertionError: Cannot find file by path: null&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#10;&#9;at util.UtilMethods.getFile(UtilMethods.java:15)&#10;&#9;at Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)&#10;&#9;at ✽.I send request with request2 to the service(src/test/java/Features/API_test.feature:5)&#10;"><![CDATA[When I send request with request2 to the service............................failed
-Then I should get status 200 and request2...................................skipped
+<testcase classname="API test for creating a few rules for redirect service" name="Create Rule2 for service" time="0.084217">
+<failure message="java.lang.AssertionError: expected:&lt;200&gt; but was:&lt;400&gt;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.failNotEquals(Assert.java:743)&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:118)&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:555)&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:542)&#10;&#9;at Glue.API_testGlue.lambda$new$1(API_testGlue.java:54)&#10;&#9;at ✽.I should get status 200 and Rule2(src/test/java/Features/API_test.feature:6)&#10;"><![CDATA[When I send request with Rule2 to the service...............................passed
+Then I should get status 200 and Rule2......................................failed
 
 StackTrace:
-java.lang.AssertionError: Cannot find file by path: null
+java.lang.AssertionError: expected:<200> but was:<400>
 	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at util.UtilMethods.getFile(UtilMethods.java:15)
-	at Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)
-	at ✽.I send request with request2 to the service(src/test/java/Features/API_test.feature:5)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:542)
+	at Glue.API_testGlue.lambda$new$1(API_testGlue.java:54)
+	at ✽.I should get status 200 and Rule2(src/test/java/Features/API_test.feature:6)
 ]]></failure>
 </testcase>
 </testsuite>
