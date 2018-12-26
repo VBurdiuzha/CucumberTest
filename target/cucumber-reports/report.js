@@ -1,210 +1,25 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/Features/CreditCard.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/Features/API_test.feature");
 formatter.feature({
-  "name": "Operations with my credit card",
-  "description": "  implementation with using DataTable",
+  "name": "API test for creating a few rules for redirect service",
+  "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@CreditCard"
-    },
-    {
-      "name": "@Login"
+      "name": "@API"
     }
   ]
-});
-formatter.scenario({
-  "name": "I want withdraw money from my card",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@CreditCard"
-    },
-    {
-      "name": "@Login"
-    }
-  ]
-});
-formatter.step({
-  "name": "I have card balance",
-  "rows": [
-    {
-      "cells": [
-        "balance",
-        "withdraw",
-        "current",
-        "operation"
-      ]
-    },
-    {
-      "cells": [
-        "900",
-        "300",
-        "600",
-        "success"
-      ]
-    },
-    {
-      "cells": [
-        "900",
-        "500",
-        "400",
-        "success"
-      ]
-    },
-    {
-      "cells": [
-        "900",
-        "999",
-        "error",
-        "failed"
-      ]
-    }
-  ],
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "CreditCardGlue.iHaveCardBalance(DataTable)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I want withdraw withdraw money from my balance",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "CreditCardGlue.iWantGetInformationAboutCurrentMoneyOnCard()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I want get information about current money on card",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "CreditCardGlue.iWantWithdrawMoneyFromMyBalance()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I want to get message about operation",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "CreditCardGlue.iWantToGetMessageAboutOperation()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.uri("src/test/java/Features/LogIn.feature");
-formatter.feature({
-  "name": "LoginFeature",
-  "description": "  Some description for this feature",
-  "keyword": "Feature",
-  "tags": [
-    {
-      "name": "@CreditCard"
-    },
-    {
-      "name": "@Login"
-    }
-  ]
-});
-formatter.scenario({
-  "name": "Login with correct username and password (DataTable implementation)",
-  "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@CreditCard"
-    },
-    {
-      "name": "@Login"
-    }
-  ]
-});
-formatter.step({
-  "name": "I navigate to the login page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "LoginGlue.iNavigateToTheLoginPage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I enter the data of person",
-  "rows": [
-    {
-      "cells": [
-        "username",
-        "password"
-      ]
-    },
-    {
-      "cells": [
-        "Bil",
-        "1234567"
-      ]
-    },
-    {
-      "cells": [
-        "Bob",
-        "7654321"
-      ]
-    }
-  ],
-  "keyword": "And "
-});
-formatter.match({
-  "location": "LoginGlue.iEnterTheDataOfPerson(DataTable)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I click login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "LoginGlue.iClickLoginButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I should see the form page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LoginGlue.iShouldSeeTheUserformPage()"
-});
-formatter.result({
-  "status": "passed"
 });
 formatter.scenarioOutline({
-  "name": "Login with correct username and password using scenario outline  (Outline implementation)",
+  "name": "Create \u003crule\u003e for service",
   "description": "",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "name": "I navigate to the login page",
-  "keyword": "Given "
+  "name": "I send request with \u003crule\u003e to the service",
+  "keyword": "When "
 });
 formatter.step({
-  "name": "I enter the \u003cusername\u003e and \u003cpassword\u003e",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "I click login button",
-  "keyword": "And "
-});
-formatter.step({
-  "name": "I should see the form page",
+  "name": "I should get status \u003ccode\u003e and \u003crule\u003e",
   "keyword": "Then "
 });
 formatter.examples({
@@ -214,246 +29,87 @@ formatter.examples({
   "rows": [
     {
       "cells": [
-        "username",
-        "password"
+        "rule",
+        "",
+        "code"
       ]
     },
     {
       "cells": [
-        "Bili",
-        "1234567"
+        "request1",
+        "",
+        "200"
       ]
     },
     {
       "cells": [
-        "Bobi",
-        "7654321"
-      ]
-    },
-    {
-      "cells": [
-        "Addi",
-        "8888888"
-      ]
-    },
-    {
-      "cells": [
-        "Puma",
-        "7777777"
+        "request2",
+        "",
+        "200"
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Login with correct username and password using scenario outline  (Outline implementation)",
+  "name": "Create request1 for service",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreditCard"
-    },
-    {
-      "name": "@Login"
+      "name": "@API"
     }
   ]
 });
 formatter.step({
-  "name": "I navigate to the login page",
-  "keyword": "Given "
+  "name": "I send request with request1 to the service",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "LoginGlue.iNavigateToTheLoginPage()"
+  "location": "API_testGlue.java:38"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.AssertionError: Cannot find file by path: null\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat util.UtilMethods.getFile(UtilMethods.java:15)\n\tat Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)\n\tat ✽.I send request with request1 to the service(src/test/java/Features/API_test.feature:5)\n",
+  "status": "failed"
 });
 formatter.step({
-  "name": "I enter the Bili and 1234567",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "LoginGlue.iEnterTheUsernameAndPassword(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I click login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "LoginGlue.iClickLoginButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I should see the form page",
+  "name": "I should get status 200 and request1",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LoginGlue.iShouldSeeTheUserformPage()"
+  "location": "API_testGlue.java:44"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.scenario({
-  "name": "Login with correct username and password using scenario outline  (Outline implementation)",
+  "name": "Create request2 for service",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@CreditCard"
-    },
-    {
-      "name": "@Login"
+      "name": "@API"
     }
   ]
 });
 formatter.step({
-  "name": "I navigate to the login page",
-  "keyword": "Given "
+  "name": "I send request with request2 to the service",
+  "keyword": "When "
 });
 formatter.match({
-  "location": "LoginGlue.iNavigateToTheLoginPage()"
+  "location": "API_testGlue.java:38"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.AssertionError: Cannot find file by path: null\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat util.UtilMethods.getFile(UtilMethods.java:15)\n\tat Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)\n\tat ✽.I send request with request2 to the service(src/test/java/Features/API_test.feature:5)\n",
+  "status": "failed"
 });
 formatter.step({
-  "name": "I enter the Bobi and 7654321",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "LoginGlue.iEnterTheUsernameAndPassword(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I click login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "LoginGlue.iClickLoginButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I should see the form page",
+  "name": "I should get status 200 and request2",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "LoginGlue.iShouldSeeTheUserformPage()"
+  "location": "API_testGlue.java:44"
 });
 formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Login with correct username and password using scenario outline  (Outline implementation)",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@CreditCard"
-    },
-    {
-      "name": "@Login"
-    }
-  ]
-});
-formatter.step({
-  "name": "I navigate to the login page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "LoginGlue.iNavigateToTheLoginPage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I enter the Addi and 8888888",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "LoginGlue.iEnterTheUsernameAndPassword(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I click login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "LoginGlue.iClickLoginButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I should see the form page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LoginGlue.iShouldSeeTheUserformPage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Login with correct username and password using scenario outline  (Outline implementation)",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@CreditCard"
-    },
-    {
-      "name": "@Login"
-    }
-  ]
-});
-formatter.step({
-  "name": "I navigate to the login page",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "LoginGlue.iNavigateToTheLoginPage()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I enter the Puma and 7777777",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "LoginGlue.iEnterTheUsernameAndPassword(String,String)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I click login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "LoginGlue.iClickLoginButton()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I should see the form page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "LoginGlue.iShouldSeeTheUserformPage()"
-});
-formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 });
