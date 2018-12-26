@@ -4,7 +4,7 @@
     "elements": [
       {
         "line": 10,
-        "name": "Create request1 for service",
+        "name": "Create Rule1 for service",
         "description": "",
         "id": "api-test-for-creating-a-few-rules-for-redirect-service;create-\u003crule\u003e-for-service;;2",
         "type": "scenario",
@@ -12,16 +12,15 @@
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.AssertionError: Cannot find file by path: null\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat util.UtilMethods.getFile(UtilMethods.java:15)\n\tat Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)\n\tat ✽.I send request with request1 to the service(src/test/java/Features/API_test.feature:5)\n",
-              "duration": 310325635,
-              "status": "failed"
+              "duration": 2938004082,
+              "status": "passed"
             },
             "line": 5,
-            "name": "I send request with request1 to the service",
+            "name": "I send request with Rule1 to the service",
             "match": {
               "arguments": [
                 {
-                  "val": "request1",
+                  "val": "Rule1",
                   "offset": 20
                 }
               ],
@@ -31,10 +30,12 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "error_message": "java.lang.AssertionError: expected:\u003c200\u003e but was:\u003c400\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat Glue.API_testGlue.lambda$new$1(API_testGlue.java:54)\n\tat ✽.I should get status 200 and Rule1(src/test/java/Features/API_test.feature:6)\n",
+              "duration": 3832778,
+              "status": "failed"
             },
             "line": 6,
-            "name": "I should get status 200 and request1",
+            "name": "I should get status 200 and Rule1",
             "match": {
               "arguments": [
                 {
@@ -42,7 +43,7 @@
                   "offset": 20
                 },
                 {
-                  "val": "request1",
+                  "val": "Rule1",
                   "offset": 28
                 }
               ],
@@ -59,7 +60,7 @@
       },
       {
         "line": 11,
-        "name": "Create request2 for service",
+        "name": "Create Rule2 for service",
         "description": "",
         "id": "api-test-for-creating-a-few-rules-for-redirect-service;create-\u003crule\u003e-for-service;;3",
         "type": "scenario",
@@ -67,16 +68,15 @@
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.AssertionError: Cannot find file by path: null\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat util.UtilMethods.getFile(UtilMethods.java:15)\n\tat Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)\n\tat ✽.I send request with request2 to the service(src/test/java/Features/API_test.feature:5)\n",
-              "duration": 1042729,
-              "status": "failed"
+              "duration": 80564382,
+              "status": "passed"
             },
             "line": 5,
-            "name": "I send request with request2 to the service",
+            "name": "I send request with Rule2 to the service",
             "match": {
               "arguments": [
                 {
-                  "val": "request2",
+                  "val": "Rule2",
                   "offset": 20
                 }
               ],
@@ -86,10 +86,12 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "error_message": "java.lang.AssertionError: expected:\u003c200\u003e but was:\u003c400\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat Glue.API_testGlue.lambda$new$1(API_testGlue.java:54)\n\tat ✽.I should get status 200 and Rule2(src/test/java/Features/API_test.feature:6)\n",
+              "duration": 729155,
+              "status": "failed"
             },
             "line": 6,
-            "name": "I should get status 200 and request2",
+            "name": "I should get status 200 and Rule2",
             "match": {
               "arguments": [
                 {
@@ -97,7 +99,7 @@
                   "offset": 20
                 },
                 {
-                  "val": "request2",
+                  "val": "Rule2",
                   "offset": 28
                 }
               ],
