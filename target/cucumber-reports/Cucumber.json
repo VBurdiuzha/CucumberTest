@@ -1,546 +1,130 @@
 [
   {
-    "line": 3,
-    "elements": [
-      {
-        "line": 6,
-        "name": "I want withdraw money from my card",
-        "description": "",
-        "id": "operations-with-my-credit-card;i-want-withdraw-money-from-my-card",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 347308142,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I have card balance",
-            "match": {
-              "location": "CreditCardGlue.iHaveCardBalance(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "balance",
-                  "withdraw",
-                  "current",
-                  "operation"
-                ]
-              },
-              {
-                "cells": [
-                  "900",
-                  "300",
-                  "600",
-                  "success"
-                ]
-              },
-              {
-                "cells": [
-                  "900",
-                  "500",
-                  "400",
-                  "success"
-                ]
-              },
-              {
-                "cells": [
-                  "900",
-                  "999",
-                  "error",
-                  "failed"
-                ]
-              }
-            ],
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 628797,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "I want withdraw withdraw money from my balance",
-            "match": {
-              "location": "CreditCardGlue.iWantGetInformationAboutCurrentMoneyOnCard()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 615650,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "I want get information about current money on card",
-            "match": {
-              "location": "CreditCardGlue.iWantWithdrawMoneyFromMyBalance()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 605480,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "I want to get message about operation",
-            "match": {
-              "location": "CreditCardGlue.iWantToGetMessageAboutOperation()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@CreditCard"
-          },
-          {
-            "name": "@Login"
-          }
-        ]
-      }
-    ],
-    "name": "Operations with my credit card",
-    "description": "  implementation with using DataTable",
-    "id": "operations-with-my-credit-card",
-    "keyword": "Feature",
-    "uri": "src/test/java/Features/CreditCard.feature",
-    "tags": [
-      {
-        "name": "@CreditCard",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      },
-      {
-        "name": "@Login",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 13
-        }
-      }
-    ]
-  },
-  {
     "line": 2,
     "elements": [
       {
-        "line": 5,
-        "name": "Login with correct username and password (DataTable implementation)",
+        "line": 10,
+        "name": "Create request1 for service",
         "description": "",
-        "id": "loginfeature;login-with-correct-username-and-password-(datatable-implementation)",
+        "id": "api-test-for-creating-a-few-rules-for-redirect-service;create-\u003crule\u003e-for-service;;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 455187,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError: Cannot find file by path: null\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat util.UtilMethods.getFile(UtilMethods.java:15)\n\tat Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)\n\tat ✽.I send request with request1 to the service(src/test/java/Features/API_test.feature:5)\n",
+              "duration": 310325635,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "I send request with request1 to the service",
+            "match": {
+              "arguments": [
+                {
+                  "val": "request1",
+                  "offset": 20
+                }
+              ],
+              "location": "API_testGlue.java:38"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
             },
             "line": 6,
-            "name": "I navigate to the login page",
+            "name": "I should get status 200 and request1",
             "match": {
-              "location": "LoginGlue.iNavigateToTheLoginPage()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 7762358,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I enter the data of person",
-            "match": {
-              "location": "LoginGlue.iEnterTheDataOfPerson(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "username",
-                  "password"
-                ]
-              },
-              {
-                "cells": [
-                  "Bil",
-                  "1234567"
-                ]
-              },
-              {
-                "cells": [
-                  "Bob",
-                  "7654321"
-                ]
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 416969,
-              "status": "passed"
-            },
-            "line": 12,
-            "name": "I click login button",
-            "match": {
-              "location": "LoginGlue.iClickLoginButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 752748,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "I should see the form page",
-            "match": {
-              "location": "LoginGlue.iShouldSeeTheUserformPage()"
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                },
+                {
+                  "val": "request1",
+                  "offset": 28
+                }
+              ],
+              "location": "API_testGlue.java:44"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@CreditCard"
-          },
-          {
-            "name": "@Login"
+            "name": "@API"
           }
         ]
       },
       {
-        "line": 23,
-        "name": "Login with correct username and password using scenario outline  (Outline implementation)",
+        "line": 11,
+        "name": "Create request2 for service",
         "description": "",
-        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline--(outline-implementation);;2",
+        "id": "api-test-for-creating-a-few-rules-for-redirect-service;create-\u003crule\u003e-for-service;;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 410705,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError: Cannot find file by path: null\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat util.UtilMethods.getFile(UtilMethods.java:15)\n\tat Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)\n\tat ✽.I send request with request2 to the service(src/test/java/Features/API_test.feature:5)\n",
+              "duration": 1042729,
+              "status": "failed"
             },
-            "line": 16,
-            "name": "I navigate to the login page",
-            "match": {
-              "location": "LoginGlue.iNavigateToTheLoginPage()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 552688,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I enter the Bili and 1234567",
+            "line": 5,
+            "name": "I send request with request2 to the service",
             "match": {
               "arguments": [
                 {
-                  "val": "Bili",
-                  "offset": 12
-                },
-                {
-                  "val": "1234567",
-                  "offset": 21
+                  "val": "request2",
+                  "offset": 20
                 }
               ],
-              "location": "LoginGlue.iEnterTheUsernameAndPassword(String,String)"
+              "location": "API_testGlue.java:38"
             },
-            "keyword": "And "
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 477341,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 18,
-            "name": "I click login button",
+            "line": 6,
+            "name": "I should get status 200 and request2",
             "match": {
-              "location": "LoginGlue.iClickLoginButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1684796,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I should see the form page",
-            "match": {
-              "location": "LoginGlue.iShouldSeeTheUserformPage()"
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 20
+                },
+                {
+                  "val": "request2",
+                  "offset": 28
+                }
+              ],
+              "location": "API_testGlue.java:44"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@CreditCard"
-          },
-          {
-            "name": "@Login"
-          }
-        ]
-      },
-      {
-        "line": 24,
-        "name": "Login with correct username and password using scenario outline  (Outline implementation)",
-        "description": "",
-        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline--(outline-implementation);;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 16884850,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "I navigate to the login page",
-            "match": {
-              "location": "LoginGlue.iNavigateToTheLoginPage()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 569197,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I enter the Bobi and 7654321",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Bobi",
-                  "offset": 12
-                },
-                {
-                  "val": "7654321",
-                  "offset": 21
-                }
-              ],
-              "location": "LoginGlue.iEnterTheUsernameAndPassword(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 383915,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I click login button",
-            "match": {
-              "location": "LoginGlue.iClickLoginButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 20382238,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I should see the form page",
-            "match": {
-              "location": "LoginGlue.iShouldSeeTheUserformPage()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@CreditCard"
-          },
-          {
-            "name": "@Login"
-          }
-        ]
-      },
-      {
-        "line": 25,
-        "name": "Login with correct username and password using scenario outline  (Outline implementation)",
-        "description": "",
-        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline--(outline-implementation);;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 618424,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "I navigate to the login page",
-            "match": {
-              "location": "LoginGlue.iNavigateToTheLoginPage()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 454381,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I enter the Addi and 8888888",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Addi",
-                  "offset": 12
-                },
-                {
-                  "val": "8888888",
-                  "offset": 21
-                }
-              ],
-              "location": "LoginGlue.iEnterTheUsernameAndPassword(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 2313203,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I click login button",
-            "match": {
-              "location": "LoginGlue.iClickLoginButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1377630,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I should see the form page",
-            "match": {
-              "location": "LoginGlue.iShouldSeeTheUserformPage()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@CreditCard"
-          },
-          {
-            "name": "@Login"
-          }
-        ]
-      },
-      {
-        "line": 26,
-        "name": "Login with correct username and password using scenario outline  (Outline implementation)",
-        "description": "",
-        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline--(outline-implementation);;5",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 296473,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "I navigate to the login page",
-            "match": {
-              "location": "LoginGlue.iNavigateToTheLoginPage()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 395227,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I enter the Puma and 7777777",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Puma",
-                  "offset": 12
-                },
-                {
-                  "val": "7777777",
-                  "offset": 21
-                }
-              ],
-              "location": "LoginGlue.iEnterTheUsernameAndPassword(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 287216,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I click login button",
-            "match": {
-              "location": "LoginGlue.iClickLoginButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 313145,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I should see the form page",
-            "match": {
-              "location": "LoginGlue.iShouldSeeTheUserformPage()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@CreditCard"
-          },
-          {
-            "name": "@Login"
+            "name": "@API"
           }
         ]
       }
     ],
-    "name": "LoginFeature",
-    "description": "  Some description for this feature",
-    "id": "loginfeature",
+    "name": "API test for creating a few rules for redirect service",
+    "description": "",
+    "id": "api-test-for-creating-a-few-rules-for-redirect-service",
     "keyword": "Feature",
-    "uri": "src/test/java/Features/LogIn.feature",
+    "uri": "src/test/java/Features/API_test.feature",
     "tags": [
       {
-        "name": "@CreditCard",
+        "name": "@API",
         "type": "Tag",
         "location": {
           "line": 1,
           "column": 1
-        }
-      },
-      {
-        "name": "@Login",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 13
         }
       }
     ]

@@ -1,45 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="6" time="0.633275">
-<testcase classname="Operations with my credit card" name="I want withdraw money from my card" time="0.405161">
-<system-out><![CDATA[Given I have card balance...................................................passed
-When I want withdraw withdraw money from my balance.........................passed
-When I want get information about current money on card.....................passed
-Then I want to get message about operation..................................passed
-]]></system-out>
+<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="0.407475">
+<testcase classname="API test for creating a few rules for redirect service" name="Create request1 for service" time="0.373211">
+<failure message="java.lang.AssertionError: Cannot find file by path: null&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#10;&#9;at util.UtilMethods.getFile(UtilMethods.java:15)&#10;&#9;at Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)&#10;&#9;at ✽.I send request with request1 to the service(src/test/java/Features/API_test.feature:5)&#10;"><![CDATA[When I send request with request1 to the service............................failed
+Then I should get status 200 and request1...................................skipped
+
+StackTrace:
+java.lang.AssertionError: Cannot find file by path: null
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at util.UtilMethods.getFile(UtilMethods.java:15)
+	at Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)
+	at ✽.I send request with request1 to the service(src/test/java/Features/API_test.feature:5)
+]]></failure>
 </testcase>
-<testcase classname="LoginFeature" name="Login with correct username and password (DataTable implementation)" time="0.061857">
-<system-out><![CDATA[Given I navigate to the login page..........................................passed
-And I enter the data of person..............................................passed
-And I click login button....................................................passed
-Then I should see the form page.............................................passed
-]]></system-out>
-</testcase>
-<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation)" time="0.048887">
-<system-out><![CDATA[Given I navigate to the login page..........................................passed
-And I enter the Bili and 1234567............................................passed
-And I click login button....................................................passed
-Then I should see the form page.............................................passed
-]]></system-out>
-</testcase>
-<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation) 2" time="0.063352">
-<system-out><![CDATA[Given I navigate to the login page..........................................passed
-And I enter the Bobi and 7654321............................................passed
-And I click login button....................................................passed
-Then I should see the form page.............................................passed
-]]></system-out>
-</testcase>
-<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation) 3" time="0.030643">
-<system-out><![CDATA[Given I navigate to the login page..........................................passed
-And I enter the Addi and 8888888............................................passed
-And I click login button....................................................passed
-Then I should see the form page.............................................passed
-]]></system-out>
-</testcase>
-<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation) 4" time="0.023375">
-<system-out><![CDATA[Given I navigate to the login page..........................................passed
-And I enter the Puma and 7777777............................................passed
-And I click login button....................................................passed
-Then I should see the form page.............................................passed
-]]></system-out>
+<testcase classname="API test for creating a few rules for redirect service" name="Create request2 for service" time="0.034264">
+<failure message="java.lang.AssertionError: Cannot find file by path: null&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#10;&#9;at util.UtilMethods.getFile(UtilMethods.java:15)&#10;&#9;at Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)&#10;&#9;at ✽.I send request with request2 to the service(src/test/java/Features/API_test.feature:5)&#10;"><![CDATA[When I send request with request2 to the service............................failed
+Then I should get status 200 and request2...................................skipped
+
+StackTrace:
+java.lang.AssertionError: Cannot find file by path: null
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at util.UtilMethods.getFile(UtilMethods.java:15)
+	at Glue.API_testGlue.lambda$new$0(API_testGlue.java:40)
+	at ✽.I send request with request2 to the service(src/test/java/Features/API_test.feature:5)
+]]></failure>
 </testcase>
 </testsuite>
