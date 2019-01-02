@@ -56,11 +56,5 @@ public class API_testGlue implements En,Depot {
                 JSONAssert.assertEquals(new UtilMethods().getFile(responseList.get(name)), serviceResponse, false);
             }
         });
-
-
-
-
-
-
     }
 }
