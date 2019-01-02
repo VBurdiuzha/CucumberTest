@@ -1,0 +1,9 @@
+{
+  "stats": [
+    {
+      "hydroEventPayload": "{\"event_type\":\"user-hovercard-hover\",\"payload\":{\"userId\":\"29865500\",\"subject\":null,\"client_id\":\"143374242.1492269150\",\"originating_request_id\":\"F856:7248:2AF3EC:547FD7:5C2CCC8A\",\"originating_url\":\"https://github.com/hovercards?user_id=29865500\",\"user_id\":29865500}}",
+      "hydroEventHmac": "450beab5bb15cc12a43ba2a34c3aa0a455bdb6c21cddfcab194061640195799d",
+      "timestamp": 1546439822450
+    }
+  ]
+}
