@@ -1,4 +1,4 @@
-@CreditCard @Login
+@CreditCard @Login @Git
 
 Feature: Operations with my credit card
   implementation with using DataTable

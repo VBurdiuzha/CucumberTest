@@ -7,7 +7,6 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.fluent.Request;
 import org.apache.http.entity.ContentType;
 import org.junit.Assert;
-import org.skyscreamer.jsonassert.JSONAssert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import util.UtilMethods;
@@ -53,4 +52,3 @@ public class API_GitGlue implements En,Depot {
         });
     }
 }
-

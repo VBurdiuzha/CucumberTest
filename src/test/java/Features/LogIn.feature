@@ -1,4 +1,4 @@
-@CreditCard @Login
+@CreditCard @Login @Git
 Feature: LoginFeature
   Some description for this feature
 

@@ -13,7 +13,7 @@ public class CreditCardGlue implements En {
 
     private static List<cardInfo> cards = new ArrayList<cardInfo>();
 
-    class cardInfo {
+     class cardInfo {
         private String balance;
         private String withdraw;
         private String current;

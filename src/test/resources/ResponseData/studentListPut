@@ -1,0 +1,27 @@
+[
+  {
+    "id": 2,
+    "name": "Mkhita",
+    "course": "Boss"
+  },
+  {
+    "id": 3,
+    "name": "Bob",
+    "course": "deff"
+  },
+  {
+    "id": 4,
+    "name": "Bil",
+    "course": "deff"
+  },
+  {
+    "id": 5,
+    "name": "Stasik",
+    "course": "playmaker"
+  },
+  {
+    "id": 6,
+    "name": "Slava",
+    "course": "playmaker"
+  }
+]
