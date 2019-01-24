@@ -1,4 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: Runer.RunTest
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.584 sec
+Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.752 sec <<< FAILURE!
+Add some students into the list(API test for setting some students to the service)  Time elapsed: 0.216 sec  <<< FAILURE!
+java.lang.AssertionError: 
+Expected: a JSON array
+     got: a JSON object
+
+	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:417)
+	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:394)
+	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:336)
+	at Glue.SetSomeStudents_Glue.lambda$new$1(SetSomeStudents_Glue.java:63)
+	at ✽.I should get new list sixStudents after adding(src/test/resources/Features/SetSomeStudents.feature:7)
+

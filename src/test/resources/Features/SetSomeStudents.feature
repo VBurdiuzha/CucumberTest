@@ -1,7 +1,8 @@
-@Student
+@CreditCard @Login @Git @Students
+
 Feature: API test for setting some students to the service
 
-  Scenario : Add some students into the list
+  Scenario: Add some students into the list
     When I add some students add2
     Then I should get new list sixStudents after adding
 

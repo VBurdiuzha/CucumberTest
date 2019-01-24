@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" time="0">
-<testcase classname="dummy" name="dummy">
-<skipped message="No features found"/>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="8" time="1.888329">
+<testcase classname="Get status form github" name="Send request and get status" time="1.463565">
+<system-out><![CDATA[When I Send repos to the github service.....................................passed
+Then I should get 200 and response from repos...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Operations with my credit card" name="I want withdraw money from my card" time="0.044776">
+<system-out><![CDATA[Given I have card balance...................................................passed
+When I want withdraw withdraw money from my balance.........................passed
+When I want get information about current money on card.....................passed
+Then I want to get message about operation..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="LoginFeature" name="Login with correct username and password (DataTable implementation)" time="0.065877">
+<system-out><![CDATA[Given I navigate to the login page..........................................passed
+And I enter the data of person..............................................passed
+And I click login button....................................................passed
+Then I should see the form page.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation)" time="0.020475">
+<system-out><![CDATA[Given I navigate to the login page..........................................passed
+And I enter the Bili and 1234567............................................passed
+And I click login button....................................................passed
+Then I should see the form page.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation) 2" time="0.015952">
+<system-out><![CDATA[Given I navigate to the login page..........................................passed
+And I enter the Bobi and 7654321............................................passed
+And I click login button....................................................passed
+Then I should see the form page.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation) 3" time="0.019218">
+<system-out><![CDATA[Given I navigate to the login page..........................................passed
+And I enter the Addi and 8888888............................................passed
+And I click login button....................................................passed
+Then I should see the form page.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation) 4" time="0.018621">
+<system-out><![CDATA[Given I navigate to the login page..........................................passed
+And I enter the Puma and 7777777............................................passed
+And I click login button....................................................passed
+Then I should see the form page.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="API test for setting some students to the service" name="Add some students into the list" time="0.239845">
+<failure message="java.lang.AssertionError: &#10;Expected: a JSON array&#10;     got: a JSON object&#10;&#10;&#9;at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:417)&#10;&#9;at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:394)&#10;&#9;at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:336)&#10;&#9;at Glue.SetSomeStudents_Glue.lambda$new$1(SetSomeStudents_Glue.java:63)&#10;&#9;at ✽.I should get new list sixStudents after adding(src/test/resources/Features/SetSomeStudents.feature:7)&#10;"><![CDATA[When I add some students add2...............................................passed
+Then I should get new list sixStudents after adding.........................failed
+
+StackTrace:
+java.lang.AssertionError: 
+Expected: a JSON array
+     got: a JSON object
+
+	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:417)
+	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:394)
+	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:336)
+	at Glue.SetSomeStudents_Glue.lambda$new$1(SetSomeStudents_Glue.java:63)
+	at ✽.I should get new list sixStudents after adding(src/test/resources/Features/SetSomeStudents.feature:7)
+]]></failure>
 </testcase>
 </testsuite>

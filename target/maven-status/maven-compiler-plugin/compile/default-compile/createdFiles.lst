@@ -5,4 +5,5 @@ Glue/CreditCardGlue.class
 com/ea/Depot.class
 Glue/LoginGlue.class
 Glue/API_testGlue.class
+Glue/SetSomeStudents_Glue.class
 util/UtilMethods.class
