@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="4.424005">
-<testcase classname="Get status form github" name="Send request and get status" time="4.424005">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="2.300598">
+<testcase classname="Get status form github" name="Send request and get status" time="2.300598">
 <system-out><![CDATA[When I Send repos to the github service.....................................passed
 Then I should get 200 and response from repos...............................passed
 ]]></system-out>
