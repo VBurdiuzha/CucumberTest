@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
 <testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="1.615383">
 <testcase classname="API test for setting some students to the service" name="Add some students into the list" time="1.543388">
 <system-out><![CDATA[When I add some students....................................................passed
@@ -13,6 +14,12 @@ Then I should get success status code.......................................pass
 <testcase classname="API test for setting some students to the service" name="Change second students into the list" time="0.038725">
 <system-out><![CDATA[When I change second students...............................................passed
 Then I should get success status code.......................................passed
+=======
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="2.300598">
+<testcase classname="Get status form github" name="Send request and get status" time="2.300598">
+<system-out><![CDATA[When I Send repos to the github service.....................................passed
+Then I should get 200 and response from repos...............................passed
+>>>>>>> master
 ]]></system-out>
 </testcase>
 </testsuite>

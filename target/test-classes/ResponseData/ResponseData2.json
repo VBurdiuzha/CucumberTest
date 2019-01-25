@@ -1,0 +1,19 @@
+{
+  "id": "2",
+  "equals": [
+    {
+      "param": "123",
+      "value": "231"
+    }
+  ],
+  "return": {
+    "server": [
+      {
+        "isNonWhitelisted": "false",
+        "name": "2",
+        "url": "http://second.test",
+        "description": "2 server route"
+      }
+    ]
+  }
+}

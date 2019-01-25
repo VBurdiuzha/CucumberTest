@@ -1,0 +1,19 @@
+{
+  "equals": [
+    {
+      "param": "123",
+      "value": "34"
+    }
+  ],
+  "return": {
+    "server": [
+      {
+        "name": "1",
+        "description": "1 server route",
+        "url": "http://ewrew.rer",
+        "isNonWhitelisted": false
+      }
+    ]
+  },
+  "id": "1"
+}

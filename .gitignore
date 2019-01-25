@@ -2,3 +2,5 @@
 .DS_Store
 TryCucumber.iml
 target/
+target/cucumber-reports/Cucumber.json
+target/cucumber-reports/Cucumber.xml

@@ -12,7 +12,11 @@
         "steps": [
           {
             "result": {
+<<<<<<< HEAD
               "duration": 1491763011,
+=======
+              "duration": 2216777339,
+>>>>>>> master
               "status": "passed"
             },
             "line": 6,
@@ -30,7 +34,11 @@
           },
           {
             "result": {
+<<<<<<< HEAD
               "duration": 10264104,
+=======
+              "duration": 1837759,
+>>>>>>> master
               "status": "passed"
             },
             "line": 7,
