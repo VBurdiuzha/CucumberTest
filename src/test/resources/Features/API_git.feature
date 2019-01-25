@@ -1,4 +1,4 @@
-@CreditCard @Login @Git @Students
+@CreditCard @Login @Git
 Feature: Get status form github
 
   Scenario Outline: Send request and get status

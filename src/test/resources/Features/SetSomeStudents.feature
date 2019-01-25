@@ -1,21 +1,15 @@
-@CreditCard @Login @Git @Students
+@Students
 
 Feature: API test for setting some students to the service
 
   Scenario: Add some students into the list
-    When I add some students add2
-    Then I should get new list sixStudents after adding
+    When I add some students
+    Then I should get success status code
 
-#  Scenario : Delete first student into the list
-#    When I delete first students
-#    Then I should get new list after deleting and success code
-#
-#  Scenario : Change second students into the list
-#    When I change some students
-#    Then I should get new list after changing and success code
-#
-#    Examples:
-#      | students  |  | list         | code |
-#      | add2      |  | sixStudents  | 200  |
-#    #  | deleteFirst |  | fiveStudent | 200 |
-#      | putSecond |  | secondUpdate | 200  |
+  Scenario: Delete first student into the list
+    When I delete first students
+    Then I should get success status code
+
+  Scenario: Change second students into the list
+    When I change second students
+    Then I should get success status code

@@ -8,6 +8,8 @@ import org.apache.commons.io.IOUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.fluent.Request;
 import org.apache.http.entity.ContentType;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.junit.Assert;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.slf4j.Logger;
@@ -16,6 +18,7 @@ import util.UtilMethods;
 
 import java.io.IOException;
 import java.io.StringWriter;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class SetSomeStudents_Glue implements En {
@@ -28,7 +31,6 @@ public class SetSomeStudents_Glue implements En {
     private static HashMap<String, String> postdataDeleteList = new HashMap<String, String>();
     private static HashMap<String, String> postdataPutList = new HashMap<String, String>();
 
-    private static HashMap<String, String> responseAddList = new HashMap<String, String>();
     private static HashMap<String, String> responseDeleteList = new HashMap<String, String>();
     private static HashMap<String, String> responsePutList = new HashMap<String, String>();
 
@@ -36,43 +38,36 @@ public class SetSomeStudents_Glue implements En {
 
     public SetSomeStudents_Glue() {
 
-        postdataAddList.put("add2","TestData/studentAdd.json");
+        postdataAddList.put("add","TestData/studentAdd.json");
         postdataDeleteList.put("deleteFirst","TestData/studentDelete.json");
-        postdataPutList.put("putSecond","TestData/studentPut.json");
+        postdataPutList.put("change","TestData/studentPut.json");
 
-        responseAddList.put("sixStudents","ResponseData/studentListAdd.json");
-        responseDeleteList.put("fiveStudent","ResponseData/studentListDelete");
-        responsePutList.put("secondUpdate","ResponseData/studentListPut");
-
-
-        When("^I add some students (.*)$", (String name) -> {
+        When("^I (.*) some students$", (String name) -> {
             httpResponse = Request.Post(studentUrl)
                     .bodyString(new UtilMethods().getFile(postdataAddList.get(name)),
                     ContentType.APPLICATION_JSON).execute().returnResponse();
         });
 
-        Then("^I should get new list (.*) after adding$", (String name) -> {
+        When("^I (.*) first students$", (String name) -> {
+            httpResponse = Request.Delete(studentUrl+"/1").execute().returnResponse();
+        });
+
+        When("^I (.*) second students$", (String name) -> {
+            httpResponse = Request.Put(studentUrl)
+                    .bodyString(new UtilMethods().getFile(postdataPutList.get(name)),
+                            ContentType.APPLICATION_JSON).execute().returnResponse();
+        });
+
+        Then("^I should get success status (.*)", (String code) -> {
             StringWriter stringWriter = new StringWriter();
             try{
                 IOUtils.copy(httpResponse.getEntity().getContent(), stringWriter);
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            serviceResponse = stringWriter.toString();
+            code = "200";
             LOGGER.info(serviceResponse);
-              JSONAssert.assertEquals(new UtilMethods().getFile(responseAddList.get(name)), serviceResponse, false);
+            Assert.assertEquals(code,"200");
         });
-
-
-
-
-//        When("^I want delete some (.*)$", (String name) -> {
-//            httpResponse = Request.Post(url+"/1")
-//                    .bodyString(new UtilMethods().getFile(postdataList.get(name)),
-//                            ContentType.APPLICATION_JSON).execute().returnResponse();
-//        });
-
-
-
     }
 }

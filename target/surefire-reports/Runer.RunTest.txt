@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: Runer.RunTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.752 sec <<< FAILURE!
-Add some students into the list(API test for setting some students to the service)  Time elapsed: 0.216 sec  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.008 sec <<< FAILURE!
+Add some students into the list(API test for setting some students to the service)  Time elapsed: 3.157 sec  <<< FAILURE!
 java.lang.AssertionError: 
 Expected: a JSON array
      got: a JSON object

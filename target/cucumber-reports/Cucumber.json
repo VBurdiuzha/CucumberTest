@@ -1,727 +1,5 @@
 [
   {
-    "line": 2,
-    "elements": [
-      {
-        "line": 10,
-        "name": "Send request and get status",
-        "description": "",
-        "id": "get-status-form-github;send-request-and-get-status;;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1418027689,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "I Send repos to the github service",
-            "match": {
-              "arguments": [
-                {
-                  "val": "repos",
-                  "offset": 7
-                }
-              ],
-              "location": "API_GitGlue.java:32"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1925867,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "I should get 200 and response from repos",
-            "match": {
-              "arguments": [
-                {
-                  "val": "200",
-                  "offset": 13
-                },
-                {
-                  "val": "repos",
-                  "offset": 35
-                }
-              ],
-              "location": "API_GitGlue.java:38"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@CreditCard"
-          },
-          {
-            "name": "@Login"
-          },
-          {
-            "name": "@Git"
-          },
-          {
-            "name": "@Students"
-          }
-        ]
-      }
-    ],
-    "name": "Get status form github",
-    "description": "",
-    "id": "get-status-form-github",
-    "keyword": "Feature",
-    "uri": "src/test/resources/Features/API_git.feature",
-    "tags": [
-      {
-        "name": "@CreditCard",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      },
-      {
-        "name": "@Login",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 13
-        }
-      },
-      {
-        "name": "@Git",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 20
-        }
-      },
-      {
-        "name": "@Students",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 25
-        }
-      }
-    ]
-  },
-  {
-    "line": 3,
-    "elements": [
-      {
-        "line": 6,
-        "name": "I want withdraw money from my card",
-        "description": "",
-        "id": "operations-with-my-credit-card;i-want-withdraw-money-from-my-card",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 18177629,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I have card balance",
-            "match": {
-              "location": "CreditCardGlue.iHaveCardBalance(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "balance",
-                  "withdraw",
-                  "current",
-                  "operation"
-                ]
-              },
-              {
-                "cells": [
-                  "900",
-                  "300",
-                  "600",
-                  "success"
-                ]
-              },
-              {
-                "cells": [
-                  "900",
-                  "500",
-                  "400",
-                  "success"
-                ]
-              },
-              {
-                "cells": [
-                  "900",
-                  "999",
-                  "error",
-                  "failed"
-                ]
-              }
-            ],
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 5649713,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "I want withdraw withdraw money from my balance",
-            "match": {
-              "location": "CreditCardGlue.iWantGetInformationAboutCurrentMoneyOnCard()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 428463,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "I want get information about current money on card",
-            "match": {
-              "location": "CreditCardGlue.iWantWithdrawMoneyFromMyBalance()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1950086,
-              "status": "passed"
-            },
-            "line": 15,
-            "name": "I want to get message about operation",
-            "match": {
-              "location": "CreditCardGlue.iWantToGetMessageAboutOperation()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@CreditCard"
-          },
-          {
-            "name": "@Login"
-          },
-          {
-            "name": "@Git"
-          },
-          {
-            "name": "@Students"
-          }
-        ]
-      }
-    ],
-    "name": "Operations with my credit card",
-    "description": "  implementation with using DataTable",
-    "id": "operations-with-my-credit-card",
-    "keyword": "Feature",
-    "uri": "src/test/resources/Features/CreditCard.feature",
-    "tags": [
-      {
-        "name": "@CreditCard",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      },
-      {
-        "name": "@Login",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 13
-        }
-      },
-      {
-        "name": "@Git",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 20
-        }
-      },
-      {
-        "name": "@Students",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 25
-        }
-      }
-    ]
-  },
-  {
-    "line": 3,
-    "elements": [
-      {
-        "line": 6,
-        "name": "Login with correct username and password (DataTable implementation)",
-        "description": "",
-        "id": "loginfeature;login-with-correct-username-and-password-(datatable-implementation)",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 960034,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "I navigate to the login page",
-            "match": {
-              "location": "LoginGlue.iNavigateToTheLoginPage()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 36096674,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "I enter the data of person",
-            "match": {
-              "location": "LoginGlue.iEnterTheDataOfPerson(DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "username",
-                  "password"
-                ]
-              },
-              {
-                "cells": [
-                  "Bil",
-                  "1234567"
-                ]
-              },
-              {
-                "cells": [
-                  "Bob",
-                  "7654321"
-                ]
-              }
-            ],
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 928962,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "I click login button",
-            "match": {
-              "location": "LoginGlue.iClickLoginButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 264674,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "I should see the form page",
-            "match": {
-              "location": "LoginGlue.iShouldSeeTheUserformPage()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@CreditCard"
-          },
-          {
-            "name": "@Login"
-          },
-          {
-            "name": "@Git"
-          },
-          {
-            "name": "@Students"
-          }
-        ]
-      },
-      {
-        "line": 24,
-        "name": "Login with correct username and password using scenario outline  (Outline implementation)",
-        "description": "",
-        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline--(outline-implementation);;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 387116,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I navigate to the login page",
-            "match": {
-              "location": "LoginGlue.iNavigateToTheLoginPage()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 395429,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I enter the Bili and 1234567",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Bili",
-                  "offset": 12
-                },
-                {
-                  "val": "1234567",
-                  "offset": 21
-                }
-              ],
-              "location": "LoginGlue.iEnterTheUsernameAndPassword(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 243518,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I click login button",
-            "match": {
-              "location": "LoginGlue.iClickLoginButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 869617,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "I should see the form page",
-            "match": {
-              "location": "LoginGlue.iShouldSeeTheUserformPage()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@CreditCard"
-          },
-          {
-            "name": "@Login"
-          },
-          {
-            "name": "@Git"
-          },
-          {
-            "name": "@Students"
-          }
-        ]
-      },
-      {
-        "line": 25,
-        "name": "Login with correct username and password using scenario outline  (Outline implementation)",
-        "description": "",
-        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline--(outline-implementation);;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 617583,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I navigate to the login page",
-            "match": {
-              "location": "LoginGlue.iNavigateToTheLoginPage()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 383287,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I enter the Bobi and 7654321",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Bobi",
-                  "offset": 12
-                },
-                {
-                  "val": "7654321",
-                  "offset": 21
-                }
-              ],
-              "location": "LoginGlue.iEnterTheUsernameAndPassword(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 637555,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I click login button",
-            "match": {
-              "location": "LoginGlue.iClickLoginButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1408390,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "I should see the form page",
-            "match": {
-              "location": "LoginGlue.iShouldSeeTheUserformPage()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@CreditCard"
-          },
-          {
-            "name": "@Login"
-          },
-          {
-            "name": "@Git"
-          },
-          {
-            "name": "@Students"
-          }
-        ]
-      },
-      {
-        "line": 26,
-        "name": "Login with correct username and password using scenario outline  (Outline implementation)",
-        "description": "",
-        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline--(outline-implementation);;4",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 1307442,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I navigate to the login page",
-            "match": {
-              "location": "LoginGlue.iNavigateToTheLoginPage()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 407970,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I enter the Addi and 8888888",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Addi",
-                  "offset": 12
-                },
-                {
-                  "val": "8888888",
-                  "offset": 21
-                }
-              ],
-              "location": "LoginGlue.iEnterTheUsernameAndPassword(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 307548,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I click login button",
-            "match": {
-              "location": "LoginGlue.iClickLoginButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 534927,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "I should see the form page",
-            "match": {
-              "location": "LoginGlue.iShouldSeeTheUserformPage()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@CreditCard"
-          },
-          {
-            "name": "@Login"
-          },
-          {
-            "name": "@Git"
-          },
-          {
-            "name": "@Students"
-          }
-        ]
-      },
-      {
-        "line": 27,
-        "name": "Login with correct username and password using scenario outline  (Outline implementation)",
-        "description": "",
-        "id": "loginfeature;login-with-correct-username-and-password-using-scenario-outline--(outline-implementation);;5",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 430403,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I navigate to the login page",
-            "match": {
-              "location": "LoginGlue.iNavigateToTheLoginPage()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 2129684,
-              "status": "passed"
-            },
-            "line": 18,
-            "name": "I enter the Puma and 7777777",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Puma",
-                  "offset": 12
-                },
-                {
-                  "val": "7777777",
-                  "offset": 21
-                }
-              ],
-              "location": "LoginGlue.iEnterTheUsernameAndPassword(String,String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 1806683,
-              "status": "passed"
-            },
-            "line": 19,
-            "name": "I click login button",
-            "match": {
-              "location": "LoginGlue.iClickLoginButton()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 696346,
-              "status": "passed"
-            },
-            "line": 20,
-            "name": "I should see the form page",
-            "match": {
-              "location": "LoginGlue.iShouldSeeTheUserformPage()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@CreditCard"
-          },
-          {
-            "name": "@Login"
-          },
-          {
-            "name": "@Git"
-          },
-          {
-            "name": "@Students"
-          }
-        ]
-      }
-    ],
-    "name": "LoginFeature",
-    "description": "  Some description for this feature",
-    "id": "loginfeature",
-    "keyword": "Feature",
-    "uri": "src/test/resources/Features/LogIn.feature",
-    "tags": [
-      {
-        "name": "@CreditCard",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      },
-      {
-        "name": "@Login",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 13
-        }
-      },
-      {
-        "name": "@Git",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 20
-        }
-      },
-      {
-        "name": "@Students",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 25
-        }
-      }
-    ]
-  },
-  {
     "line": 3,
     "elements": [
       {
@@ -734,52 +12,144 @@
         "steps": [
           {
             "result": {
-              "duration": 179972680,
+              "duration": 1491763011,
               "status": "passed"
             },
             "line": 6,
-            "name": "I add some students add2",
+            "name": "I add some students",
             "match": {
               "arguments": [
                 {
-                  "val": "add2",
-                  "offset": 20
+                  "val": "add",
+                  "offset": 2
                 }
               ],
-              "location": "SetSomeStudents_Glue.java:48"
+              "location": "SetSomeStudents_Glue.java:45"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: \nExpected: a JSON array\n     got: a JSON object\n\n\tat org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:417)\n\tat org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:394)\n\tat org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:336)\n\tat Glue.SetSomeStudents_Glue.lambda$new$1(SetSomeStudents_Glue.java:63)\n\tat ✽.I should get new list sixStudents after adding(src/test/resources/Features/SetSomeStudents.feature:7)\n",
-              "duration": 16177149,
-              "status": "failed"
+              "duration": 10264104,
+              "status": "passed"
             },
             "line": 7,
-            "name": "I should get new list sixStudents after adding",
+            "name": "I should get success status code",
             "match": {
               "arguments": [
                 {
-                  "val": "sixStudents",
-                  "offset": 22
+                  "val": "code",
+                  "offset": 28
                 }
               ],
-              "location": "SetSomeStudents_Glue.java:54"
+              "location": "SetSomeStudents_Glue.java:61"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@CreditCard"
+            "name": "@Students"
+          }
+        ]
+      },
+      {
+        "line": 9,
+        "name": "Delete first student into the list",
+        "description": "",
+        "id": "api-test-for-setting-some-students-to-the-service;delete-first-student-into-the-list",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 28872865,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I delete first students",
+            "match": {
+              "arguments": [
+                {
+                  "val": "delete",
+                  "offset": 2
+                }
+              ],
+              "location": "SetSomeStudents_Glue.java:51"
+            },
+            "keyword": "When "
           },
           {
-            "name": "@Login"
+            "result": {
+              "duration": 908316,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I should get success status code",
+            "match": {
+              "arguments": [
+                {
+                  "val": "code",
+                  "offset": 28
+                }
+              ],
+              "location": "SetSomeStudents_Glue.java:61"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Students"
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Change second students into the list",
+        "description": "",
+        "id": "api-test-for-setting-some-students-to-the-service;change-second-students-into-the-list",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 22070582,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I change second students",
+            "match": {
+              "arguments": [
+                {
+                  "val": "change",
+                  "offset": 2
+                }
+              ],
+              "location": "SetSomeStudents_Glue.java:55"
+            },
+            "keyword": "When "
           },
           {
-            "name": "@Git"
-          },
+            "result": {
+              "duration": 1411085,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I should get success status code",
+            "match": {
+              "arguments": [
+                {
+                  "val": "code",
+                  "offset": 28
+                }
+              ],
+              "location": "SetSomeStudents_Glue.java:61"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
           {
             "name": "@Students"
           }
@@ -793,35 +163,11 @@
     "uri": "src/test/resources/Features/SetSomeStudents.feature",
     "tags": [
       {
-        "name": "@CreditCard",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      },
-      {
-        "name": "@Login",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 13
-        }
-      },
-      {
-        "name": "@Git",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 20
-        }
-      },
-      {
         "name": "@Students",
         "type": "Tag",
         "location": {
           "line": 1,
-          "column": 25
+          "column": 1
         }
       }
     ]

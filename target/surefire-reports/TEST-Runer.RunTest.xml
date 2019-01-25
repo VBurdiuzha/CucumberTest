@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="1" name="Runer.RunTest" time="1.791" errors="0" skipped="0">
+<testsuite tests="1" failures="1" name="Runer.RunTest" time="3.157" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre/lib"/>
@@ -64,14 +64,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="Get status form github" name="Send request and get status" time="1.431"/>
-  <testcase classname="Operations with my credit card" name="I want withdraw money from my card" time="0.036"/>
-  <testcase classname="LoginFeature" name="Login with correct username and password (DataTable implementation)" time="0.052"/>
-  <testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation)" time="0.008"/>
-  <testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation)" time="0.014"/>
-  <testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation)" time="0.016"/>
-  <testcase classname="LoginFeature" name="Login with correct username and password using scenario outline  (Outline implementation)" time="0.018"/>
-  <testcase classname="API test for setting some students to the service" name="Add some students into the list" time="0.216">
+  <testcase classname="API test for setting some students to the service" name="Add some students into the list" time="3.157">
     <failure message="
 Expected: a JSON array
      got: a JSON object
@@ -85,11 +78,10 @@ Expected: a JSON array
 	at Glue.SetSomeStudents_Glue.lambda$new$1(SetSomeStudents_Glue.java:63)
 	at ✽.I should get new list sixStudents after adding(src/test/resources/Features/SetSomeStudents.feature:7)
 </failure>
-    <system-out>
-@CreditCard @Login @Git @Students
+    <system-out>@Students
 Feature: API test for setting some students to the service
 
-  @CreditCard @Login @Git @Students
+  @Students
   Scenario: Add some students into the list             &amp;#27;[90m# src/test/resources/Features/SetSomeStudents.feature:5&amp;#27;[0m
     &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mI add some students &amp;#27;[0m&amp;#27;[32m&amp;#27;[1madd2&amp;#27;[0m                       &amp;#27;[90m# SetSomeStudents_Glue.java:48&amp;#27;[0m
     &amp;#27;[31mThen &amp;#27;[0m&amp;#27;[31mI should get new list &amp;#27;[0m&amp;#27;[31m&amp;#27;[1msixStudents&amp;#27;[0m&amp;#27;[31m after adding&amp;#27;[0m &amp;#27;[90m# SetSomeStudents_Glue.java:54&amp;#27;[0m
@@ -104,5 +96,9 @@ Expected: a JSON array
 	at ✽.I should get new list sixStudents after adding(src/test/resources/Features/SetSomeStudents.feature:7)
 &amp;#27;[0m
 </system-out>
+    <system-err>log4j:WARN No appenders could be found for logger (org.apache.http.client.protocol.RequestAddCookies).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+</system-err>
   </testcase>
 </testsuite>
