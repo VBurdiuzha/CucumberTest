@@ -1,45 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="3" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="0.829045">
-<testcase classname="Translate save-rescue-configs for Juniper (all platforms)" name="Translate save-rescue-configs for Juniper (all platforms)" time="0.803013">
-<failure message="java.lang.AssertionError: Cannot find file by path: null&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#10;&#9;at util.UtilMethods.getFile(UtilMethods.java:15)&#10;&#9;at Glue.PNP_26237Glue.lambda$new$1(PNP_26237Glue.java:54)&#10;&#9;at ✽.I post save-rescue-config-t to deciphering service(src/test/resources/Features/PNP-26237.feature:7)&#10;"><![CDATA[When I post save-rescue-config-t to translation service.....................passed
-When I post save-rescue-config-t to deciphering service.....................failed
-Then I get back tResp and HTTP 200..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Cannot find file by path: null
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at util.UtilMethods.getFile(UtilMethods.java:15)
-	at Glue.PNP_26237Glue.lambda$new$1(PNP_26237Glue.java:54)
-	at ✽.I post save-rescue-config-t to deciphering service(src/test/resources/Features/PNP-26237.feature:7)
-]]></failure>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="1.443287">
+<testcase classname="Translate save-rescue-configs for Juniper (all platforms)" name="Translate save-rescue-configs for Juniper translation service (all platforms)" time="1.336425">
+<system-out><![CDATA[When I post save-rescue-config-t to translation service.....................passed
+Then I get back tResp and HTTP 200 from translation service.................passed
+]]></system-out>
 </testcase>
-<testcase classname="Translate save-rescue-configs for Juniper (all platforms)" name="Translate save-rescue-configs for Juniper (all platforms) 2" time="0.011181">
-<failure message="java.lang.AssertionError: Cannot find file by path: null&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#10;&#9;at util.UtilMethods.getFile(UtilMethods.java:15)&#10;&#9;at Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)&#10;&#9;at ✽.I post save-rescue-config-d to translation service(src/test/resources/Features/PNP-26237.feature:6)&#10;"><![CDATA[When I post save-rescue-config-d to translation service.....................failed
-When I post save-rescue-config-d to deciphering service.....................skipped
-Then I get back dResp and HTTP 200..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Cannot find file by path: null
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at util.UtilMethods.getFile(UtilMethods.java:15)
-	at Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)
-	at ✽.I post save-rescue-config-d to translation service(src/test/resources/Features/PNP-26237.feature:6)
-]]></failure>
+<testcase classname="Translate save-rescue-configs for Juniper (all platforms)" name="Translate save-rescue-configs for Juniper deciphering service (all platforms)" time="0.057573">
+<system-out><![CDATA[When I post save-rescue-config-d to deciphering service.....................passed
+Then I get back dResp and HTTP 200 from deciphering service.................passed
+]]></system-out>
 </testcase>
-<testcase classname="Translate save-rescue-configs for Juniper (all platforms)" name="Translate save-rescue-configs for Juniper (all platforms) 3" time="0.014851">
-<failure message="java.lang.AssertionError: Cannot find file by path: null&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#10;&#9;at util.UtilMethods.getFile(UtilMethods.java:15)&#10;&#9;at Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)&#10;&#9;at ✽.I post save-rescue-config-d-er to translation service(src/test/resources/Features/PNP-26237.feature:6)&#10;"><![CDATA[When I post save-rescue-config-d-er to translation service..................failed
-When I post save-rescue-config-d-er to deciphering service..................skipped
-Then I get back dErResp and HTTP 200........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Cannot find file by path: null
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at util.UtilMethods.getFile(UtilMethods.java:15)
-	at Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)
-	at ✽.I post save-rescue-config-d-er to translation service(src/test/resources/Features/PNP-26237.feature:6)
-]]></failure>
+<testcase classname="Translate save-rescue-configs for Juniper (all platforms)" name="Translate save-rescue-configs for Juniper deciphering service (all platforms) 2" time="0.049289">
+<system-out><![CDATA[When I post save-rescue-config-d-er to deciphering service..................passed
+Then I get back dErResp and HTTP 200 from deciphering service...............passed
+]]></system-out>
 </testcase>
 </testsuite>

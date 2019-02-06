@@ -3,16 +3,16 @@
     "line": 2,
     "elements": [
       {
-        "line": 12,
-        "name": "Translate save-rescue-configs for Juniper (all platforms)",
+        "line": 11,
+        "name": "Translate save-rescue-configs for Juniper translation service (all platforms)",
         "description": "",
-        "id": "translate-save-rescue-configs-for-juniper-(all-platforms);translate-save-rescue-configs-for-juniper-(all-platforms);;2",
+        "id": "translate-save-rescue-configs-for-juniper-(all-platforms);translate-save-rescue-configs-for-juniper-translation-service-(all-platforms);;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 738748959,
+              "duration": 1173999926,
               "status": "passed"
             },
             "line": 6,
@@ -30,29 +30,11 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: Cannot find file by path: null\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat util.UtilMethods.getFile(UtilMethods.java:15)\n\tat Glue.PNP_26237Glue.lambda$new$1(PNP_26237Glue.java:54)\n\tat ✽.I post save-rescue-config-t to deciphering service(src/test/resources/Features/PNP-26237.feature:7)\n",
-              "duration": 5810777,
-              "status": "failed"
+              "duration": 67809853,
+              "status": "passed"
             },
             "line": 7,
-            "name": "I post save-rescue-config-t to deciphering service",
-            "match": {
-              "arguments": [
-                {
-                  "val": "save-rescue-config-t",
-                  "offset": 7
-                }
-              ],
-              "location": "PNP_26237Glue.java:52"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 8,
-            "name": "I get back tResp and HTTP 200",
+            "name": "I get back tResp and HTTP 200 from translation service",
             "match": {
               "arguments": [
                 {
@@ -64,7 +46,7 @@
                   "offset": 26
                 }
               ],
-              "location": "PNP_26237Glue.java:57"
+              "location": "PNP_26237Glue.java:58"
             },
             "keyword": "Then "
           }
@@ -76,37 +58,19 @@
         ]
       },
       {
-        "line": 13,
-        "name": "Translate save-rescue-configs for Juniper (all platforms)",
+        "line": 21,
+        "name": "Translate save-rescue-configs for Juniper deciphering service (all platforms)",
         "description": "",
-        "id": "translate-save-rescue-configs-for-juniper-(all-platforms);translate-save-rescue-configs-for-juniper-(all-platforms);;3",
+        "id": "translate-save-rescue-configs-for-juniper-(all-platforms);translate-save-rescue-configs-for-juniper-deciphering-service-(all-platforms);;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.AssertionError: Cannot find file by path: null\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat util.UtilMethods.getFile(UtilMethods.java:15)\n\tat Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)\n\tat ✽.I post save-rescue-config-d to translation service(src/test/resources/Features/PNP-26237.feature:6)\n",
-              "duration": 1056289,
-              "status": "failed"
+              "duration": 30198910,
+              "status": "passed"
             },
-            "line": 6,
-            "name": "I post save-rescue-config-d to translation service",
-            "match": {
-              "arguments": [
-                {
-                  "val": "save-rescue-config-d",
-                  "offset": 7
-                }
-              ],
-              "location": "PNP_26237Glue.java:47"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 7,
+            "line": 16,
             "name": "I post save-rescue-config-d to deciphering service",
             "match": {
               "arguments": [
@@ -121,10 +85,11 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1716129,
+              "status": "passed"
             },
-            "line": 8,
-            "name": "I get back dResp and HTTP 200",
+            "line": 17,
+            "name": "I get back dResp and HTTP 200 from deciphering service",
             "match": {
               "arguments": [
                 {
@@ -136,7 +101,7 @@
                   "offset": 26
                 }
               ],
-              "location": "PNP_26237Glue.java:57"
+              "location": "PNP_26237Glue.java:69"
             },
             "keyword": "Then "
           }
@@ -148,37 +113,19 @@
         ]
       },
       {
-        "line": 14,
-        "name": "Translate save-rescue-configs for Juniper (all platforms)",
+        "line": 22,
+        "name": "Translate save-rescue-configs for Juniper deciphering service (all platforms)",
         "description": "",
-        "id": "translate-save-rescue-configs-for-juniper-(all-platforms);translate-save-rescue-configs-for-juniper-(all-platforms);;4",
+        "id": "translate-save-rescue-configs-for-juniper-(all-platforms);translate-save-rescue-configs-for-juniper-deciphering-service-(all-platforms);;3",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "error_message": "java.lang.AssertionError: Cannot find file by path: null\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat util.UtilMethods.getFile(UtilMethods.java:15)\n\tat Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)\n\tat ✽.I post save-rescue-config-d-er to translation service(src/test/resources/Features/PNP-26237.feature:6)\n",
-              "duration": 1403039,
-              "status": "failed"
+              "duration": 36383668,
+              "status": "passed"
             },
-            "line": 6,
-            "name": "I post save-rescue-config-d-er to translation service",
-            "match": {
-              "arguments": [
-                {
-                  "val": "save-rescue-config-d-er",
-                  "offset": 7
-                }
-              ],
-              "location": "PNP_26237Glue.java:47"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 7,
+            "line": 16,
             "name": "I post save-rescue-config-d-er to deciphering service",
             "match": {
               "arguments": [
@@ -193,10 +140,11 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 8923530,
+              "status": "passed"
             },
-            "line": 8,
-            "name": "I get back dErResp and HTTP 200",
+            "line": 17,
+            "name": "I get back dErResp and HTTP 200 from deciphering service",
             "match": {
               "arguments": [
                 {
@@ -208,7 +156,7 @@
                   "offset": 28
                 }
               ],
-              "location": "PNP_26237Glue.java:57"
+              "location": "PNP_26237Glue.java:69"
             },
             "keyword": "Then "
           }

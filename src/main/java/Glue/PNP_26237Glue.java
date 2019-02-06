@@ -17,30 +17,30 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.util.HashMap;
 
-public class PNP_26237Glue implements En {
+public class PNP_26237Glue implements En,Depot {
     HttpResponse httpResponse = null;
-    String serviceResponse = null;
-    String translationURL = Depot.translationURL;
-    String decipheringURL = Depot.decipheringURL;
-
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(API_GitGlue.class);
+    private String serviceResponse = null;
+    private String translationURL = Depot.translationURL;
+    private String decipheringURL = Depot.decipheringURL;
+    private static final Logger LOGGER = LoggerFactory.getLogger(PNP_26237Glue.class);
 
     private static HashMap<String, String> postdataTranList = new HashMap<String, String>();
     private static HashMap<String, String> postdataDecList = new HashMap<String, String>();
-    private static HashMap<String, String> responseList = new HashMap<String, String>();
+    private static HashMap<String, String> responseTList = new HashMap<String, String>();
+    private static HashMap<String, String> responseDList = new HashMap<String, String>();
+
 
 
 
     public PNP_26237Glue() {
 
         postdataTranList.put("save-rescue-config-t","TestData/PNP_26237_t.json");
-        postdataDecList.put("save-rescue-config-d","TestData/PNP_26237_d.json");
+        postdataDecList.put("save-rescue-config-d","TestData/PNP_262370_d.json");
         postdataDecList.put("save-rescue-config-d-er","TestData/PNP_26237_dEr.json");
 
-        responseList.put("tResp","ResponseData/PNP_26237_RespT.json");
-        responseList.put("dResp","ResponseData/PNP_26237_RespD.json");
-        responseList.put("dErResp","ResponseData/PNP_26237_RespDEr.json");
+        responseTList.put("tResp","ResponseData/PNP_26237_RespT.json");
+        responseDList.put("dResp","ResponseData/PNP_26237_RespD.json");
+        responseDList.put("dErResp","ResponseData/PNP_26237_RespDEr.json");
 
 
 
@@ -54,14 +54,26 @@ public class PNP_26237Glue implements En {
                     .bodyString(new UtilMethods().getFile(postdataDecList.get(name)),
                             ContentType.APPLICATION_JSON).execute().returnResponse();
         });
-        Then("^I get back (.*) and HTTP (.*)$", (String respone,String code) -> {
+
+        Then("^I get back (.*) and HTTP (.*) from translation service$", (String response,String code) -> {
             StringWriter stringWriter = new StringWriter();
             IOUtils.copy(httpResponse.getEntity().getContent(), stringWriter);
             serviceResponse = stringWriter.toString();
             LOGGER.info(serviceResponse);
             Assert.assertEquals(Integer.parseInt(code), httpResponse.getStatusLine().getStatusCode());
             if (code.equals("200")) {
-                JSONAssert.assertEquals(serviceResponse, new UtilMethods().getFile(responseList.get(respone)), false);
+                JSONAssert.assertEquals(serviceResponse, new UtilMethods().getFile(responseTList.get(response)), false);
+            }
+        });
+
+        Then("^I get back (.*) and HTTP (.*) from deciphering service$", (String response,String code) -> {
+            StringWriter stringWriter = new StringWriter();
+            IOUtils.copy(httpResponse.getEntity().getContent(), stringWriter);
+            serviceResponse = stringWriter.toString();
+            LOGGER.info(serviceResponse);
+            Assert.assertEquals(Integer.parseInt(code), httpResponse.getStatusLine().getStatusCode());
+            if (code.equals("200")) {
+                JSONAssert.assertEquals(serviceResponse, new UtilMethods().getFile(responseDList.get(response)), false);
             }
         });
     }

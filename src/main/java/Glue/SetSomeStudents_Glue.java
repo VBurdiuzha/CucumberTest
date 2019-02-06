@@ -25,7 +25,7 @@ public class SetSomeStudents_Glue implements En {
     HttpResponse httpResponse = null;
     String serviceResponse = null;
     String studentUrl = Depot.ServerStudentUrl;
-    private static final Logger LOGGER = LoggerFactory.getLogger(API_GitGlue.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(SetSomeStudents_Glue.class);
 
     private static HashMap<String, String> postdataAddList = new HashMap<String, String>();
     private static HashMap<String, String> postdataDeleteList = new HashMap<String, String>();
