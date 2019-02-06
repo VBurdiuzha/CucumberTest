@@ -1,0 +1,22 @@
+{
+    "requestId": "TEST_REQUEST_ID",
+    "commandTranslations": [
+        {
+            "commands": [
+                {
+                    "type": "OPERATION",
+                    "partner": "Comcast",
+                    "what": "save-rescue-config",
+                    "parameters": []
+                }
+            ],
+            "deviceCommands": [
+                {
+                    "type": "NETCONF",
+                    "xml": "<rpc><request-save-rescue-configuration></request-save-rescue-configuration></rpc>",
+                    "command": "<rpc><request-save-rescue-configuration></request-save-rescue-configuration></rpc>"
+                }
+            ]
+        }
+    ]
+}

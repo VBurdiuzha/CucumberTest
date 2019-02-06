@@ -1,0 +1,31 @@
+{
+  "requestId": "2601",
+  "commands": [
+    {
+      "type": "OPERATION",
+      "partner": "Comcast",
+      "what": "save-rescue-config"
+    }
+  ],
+  "deviceResponses": [
+    {
+      "data": "
+      <rpc-reply>
+        <rpc-error>
+          <error-type>protocol</error-type>
+          <error-tag>operation-failed</error-tag>
+          <error-severity>error</error-severity>
+          <error-message>syntax error</error-message>
+          <error-info>
+            <bad-element>fail</bad-element>
+          </error-info>
+        </rpc-error>
+      </rpc-reply>
+      "
+    }
+  ],
+  "device": {
+    "make": "juniper",
+    "model": "mx80"
+  }
+}

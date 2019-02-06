@@ -1,15 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: Runer.RunTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.008 sec <<< FAILURE!
-Add some students into the list(API test for setting some students to the service)  Time elapsed: 3.157 sec  <<< FAILURE!
-java.lang.AssertionError: 
-Expected: a JSON array
-     got: a JSON object
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.785 sec <<< FAILURE!
+Translate save-rescue-configs for Juniper (all platforms)(Translate save-rescue-configs for Juniper (all platforms))  Time elapsed: 0.808 sec  <<< FAILURE!
+java.lang.AssertionError: Cannot find file by path: null
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at util.UtilMethods.getFile(UtilMethods.java:15)
+	at Glue.PNP_26237Glue.lambda$new$1(PNP_26237Glue.java:54)
+	at ✽.I post save-rescue-config-t to deciphering service(src/test/resources/Features/PNP-26237.feature:7)
 
-	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:417)
-	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:394)
-	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:336)
-	at Glue.SetSomeStudents_Glue.lambda$new$1(SetSomeStudents_Glue.java:63)
-	at ✽.I should get new list sixStudents after adding(src/test/resources/Features/SetSomeStudents.feature:7)
+Translate save-rescue-configs for Juniper (all platforms)(Translate save-rescue-configs for Juniper (all platforms))  Time elapsed: 0 sec  <<< FAILURE!
+java.lang.AssertionError: Cannot find file by path: null
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at util.UtilMethods.getFile(UtilMethods.java:15)
+	at Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)
+	at ✽.I post save-rescue-config-d to translation service(src/test/resources/Features/PNP-26237.feature:6)
+
+Translate save-rescue-configs for Juniper (all platforms)(Translate save-rescue-configs for Juniper (all platforms))  Time elapsed: 0.001 sec  <<< FAILURE!
+java.lang.AssertionError: Cannot find file by path: null
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at util.UtilMethods.getFile(UtilMethods.java:15)
+	at Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)
+	at ✽.I post save-rescue-config-d-er to translation service(src/test/resources/Features/PNP-26237.feature:6)
 

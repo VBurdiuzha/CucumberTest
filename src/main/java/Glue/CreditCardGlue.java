@@ -12,25 +12,26 @@ import java.util.List;
 public class CreditCardGlue implements En {
 
     private static List<cardInfo> cards = new ArrayList<cardInfo>();
+    private List<cardInfo> cards1;
 
-     class cardInfo {
+    class cardInfo {
         private String balance;
         private String withdraw;
         private String current;
         private String operation;
 
         public cardInfo(String balance, String withdraw, String current, String operation) {
-            this.balance = balance;
-            this.withdraw = withdraw;
-            this.current = current;
-            this.operation = operation;
+                this.balance = balance;
+                this.withdraw = withdraw;
+                this.current = current;
+                this.operation = operation;
         }
     }
 
     @Given("^I have card balance$")
     public void iHaveCardBalance(DataTable table){
 
-        cards = table.asList(cardInfo.class);
+        cards = cards1;
 
         for (cardInfo info : cards) {
             System.out.println("There are " + info.balance + " money on my balance");

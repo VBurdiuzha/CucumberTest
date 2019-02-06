@@ -1,0 +1,8 @@
+{
+    "requestId": "2601",
+    "type": "OPERATION",
+    "successful": false,
+    "errors": [
+        "syntax error . bad-element: fail"
+    ]
+}

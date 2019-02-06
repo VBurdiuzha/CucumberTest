@@ -1,25 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="1.615383">
-<testcase classname="API test for setting some students to the service" name="Add some students into the list" time="1.543388">
-<system-out><![CDATA[When I add some students....................................................passed
-Then I should get success status code.......................................passed
-]]></system-out>
+<testsuite failures="3" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="0.829045">
+<testcase classname="Translate save-rescue-configs for Juniper (all platforms)" name="Translate save-rescue-configs for Juniper (all platforms)" time="0.803013">
+<failure message="java.lang.AssertionError: Cannot find file by path: null&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#10;&#9;at util.UtilMethods.getFile(UtilMethods.java:15)&#10;&#9;at Glue.PNP_26237Glue.lambda$new$1(PNP_26237Glue.java:54)&#10;&#9;at ✽.I post save-rescue-config-t to deciphering service(src/test/resources/Features/PNP-26237.feature:7)&#10;"><![CDATA[When I post save-rescue-config-t to translation service.....................passed
+When I post save-rescue-config-t to deciphering service.....................failed
+Then I get back tResp and HTTP 200..........................................skipped
+
+StackTrace:
+java.lang.AssertionError: Cannot find file by path: null
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at util.UtilMethods.getFile(UtilMethods.java:15)
+	at Glue.PNP_26237Glue.lambda$new$1(PNP_26237Glue.java:54)
+	at ✽.I post save-rescue-config-t to deciphering service(src/test/resources/Features/PNP-26237.feature:7)
+]]></failure>
 </testcase>
-<testcase classname="API test for setting some students to the service" name="Delete first student into the list" time="0.03327">
-<system-out><![CDATA[When I delete first students................................................passed
-Then I should get success status code.......................................passed
-]]></system-out>
+<testcase classname="Translate save-rescue-configs for Juniper (all platforms)" name="Translate save-rescue-configs for Juniper (all platforms) 2" time="0.011181">
+<failure message="java.lang.AssertionError: Cannot find file by path: null&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#10;&#9;at util.UtilMethods.getFile(UtilMethods.java:15)&#10;&#9;at Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)&#10;&#9;at ✽.I post save-rescue-config-d to translation service(src/test/resources/Features/PNP-26237.feature:6)&#10;"><![CDATA[When I post save-rescue-config-d to translation service.....................failed
+When I post save-rescue-config-d to deciphering service.....................skipped
+Then I get back dResp and HTTP 200..........................................skipped
+
+StackTrace:
+java.lang.AssertionError: Cannot find file by path: null
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at util.UtilMethods.getFile(UtilMethods.java:15)
+	at Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)
+	at ✽.I post save-rescue-config-d to translation service(src/test/resources/Features/PNP-26237.feature:6)
+]]></failure>
 </testcase>
-<testcase classname="API test for setting some students to the service" name="Change second students into the list" time="0.038725">
-<system-out><![CDATA[When I change second students...............................................passed
-Then I should get success status code.......................................passed
-=======
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="2.300598">
-<testcase classname="Get status form github" name="Send request and get status" time="2.300598">
-<system-out><![CDATA[When I Send repos to the github service.....................................passed
-Then I should get 200 and response from repos...............................passed
->>>>>>> master
-]]></system-out>
+<testcase classname="Translate save-rescue-configs for Juniper (all platforms)" name="Translate save-rescue-configs for Juniper (all platforms) 3" time="0.014851">
+<failure message="java.lang.AssertionError: Cannot find file by path: null&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#10;&#9;at util.UtilMethods.getFile(UtilMethods.java:15)&#10;&#9;at Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)&#10;&#9;at ✽.I post save-rescue-config-d-er to translation service(src/test/resources/Features/PNP-26237.feature:6)&#10;"><![CDATA[When I post save-rescue-config-d-er to translation service..................failed
+When I post save-rescue-config-d-er to deciphering service..................skipped
+Then I get back dErResp and HTTP 200........................................skipped
+
+StackTrace:
+java.lang.AssertionError: Cannot find file by path: null
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at util.UtilMethods.getFile(UtilMethods.java:15)
+	at Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)
+	at ✽.I post save-rescue-config-d-er to translation service(src/test/resources/Features/PNP-26237.feature:6)
+]]></failure>
 </testcase>
 </testsuite>

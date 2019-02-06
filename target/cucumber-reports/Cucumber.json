@@ -1,177 +1,233 @@
 [
   {
-    "line": 3,
+    "line": 2,
     "elements": [
       {
-        "line": 5,
-        "name": "Add some students into the list",
+        "line": 12,
+        "name": "Translate save-rescue-configs for Juniper (all platforms)",
         "description": "",
-        "id": "api-test-for-setting-some-students-to-the-service;add-some-students-into-the-list",
+        "id": "translate-save-rescue-configs-for-juniper-(all-platforms);translate-save-rescue-configs-for-juniper-(all-platforms);;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-<<<<<<< HEAD
-              "duration": 1491763011,
-=======
-              "duration": 2216777339,
->>>>>>> master
+              "duration": 738748959,
               "status": "passed"
             },
             "line": 6,
-            "name": "I add some students",
+            "name": "I post save-rescue-config-t to translation service",
             "match": {
               "arguments": [
                 {
-                  "val": "add",
-                  "offset": 2
+                  "val": "save-rescue-config-t",
+                  "offset": 7
                 }
               ],
-              "location": "SetSomeStudents_Glue.java:45"
+              "location": "PNP_26237Glue.java:47"
             },
             "keyword": "When "
           },
           {
             "result": {
-<<<<<<< HEAD
-              "duration": 10264104,
-=======
-              "duration": 1837759,
->>>>>>> master
-              "status": "passed"
+              "error_message": "java.lang.AssertionError: Cannot find file by path: null\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat util.UtilMethods.getFile(UtilMethods.java:15)\n\tat Glue.PNP_26237Glue.lambda$new$1(PNP_26237Glue.java:54)\n\tat ✽.I post save-rescue-config-t to deciphering service(src/test/resources/Features/PNP-26237.feature:7)\n",
+              "duration": 5810777,
+              "status": "failed"
             },
             "line": 7,
-            "name": "I should get success status code",
+            "name": "I post save-rescue-config-t to deciphering service",
             "match": {
               "arguments": [
                 {
-                  "val": "code",
-                  "offset": 28
+                  "val": "save-rescue-config-t",
+                  "offset": 7
                 }
               ],
-              "location": "SetSomeStudents_Glue.java:61"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Students"
-          }
-        ]
-      },
-      {
-        "line": 9,
-        "name": "Delete first student into the list",
-        "description": "",
-        "id": "api-test-for-setting-some-students-to-the-service;delete-first-student-into-the-list",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 28872865,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I delete first students",
-            "match": {
-              "arguments": [
-                {
-                  "val": "delete",
-                  "offset": 2
-                }
-              ],
-              "location": "SetSomeStudents_Glue.java:51"
+              "location": "PNP_26237Glue.java:52"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 908316,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 11,
-            "name": "I should get success status code",
+            "line": 8,
+            "name": "I get back tResp and HTTP 200",
             "match": {
               "arguments": [
                 {
-                  "val": "code",
-                  "offset": 28
+                  "val": "tResp",
+                  "offset": 11
+                },
+                {
+                  "val": "200",
+                  "offset": 26
                 }
               ],
-              "location": "SetSomeStudents_Glue.java:61"
+              "location": "PNP_26237Glue.java:57"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Students"
+            "name": "@26237"
           }
         ]
       },
       {
         "line": 13,
-        "name": "Change second students into the list",
+        "name": "Translate save-rescue-configs for Juniper (all platforms)",
         "description": "",
-        "id": "api-test-for-setting-some-students-to-the-service;change-second-students-into-the-list",
+        "id": "translate-save-rescue-configs-for-juniper-(all-platforms);translate-save-rescue-configs-for-juniper-(all-platforms);;3",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 22070582,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError: Cannot find file by path: null\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat util.UtilMethods.getFile(UtilMethods.java:15)\n\tat Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)\n\tat ✽.I post save-rescue-config-d to translation service(src/test/resources/Features/PNP-26237.feature:6)\n",
+              "duration": 1056289,
+              "status": "failed"
             },
-            "line": 14,
-            "name": "I change second students",
+            "line": 6,
+            "name": "I post save-rescue-config-d to translation service",
             "match": {
               "arguments": [
                 {
-                  "val": "change",
-                  "offset": 2
+                  "val": "save-rescue-config-d",
+                  "offset": 7
                 }
               ],
-              "location": "SetSomeStudents_Glue.java:55"
+              "location": "PNP_26237Glue.java:47"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1411085,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 15,
-            "name": "I should get success status code",
+            "line": 7,
+            "name": "I post save-rescue-config-d to deciphering service",
             "match": {
               "arguments": [
                 {
-                  "val": "code",
-                  "offset": 28
+                  "val": "save-rescue-config-d",
+                  "offset": 7
                 }
               ],
-              "location": "SetSomeStudents_Glue.java:61"
+              "location": "PNP_26237Glue.java:52"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "I get back dResp and HTTP 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "dResp",
+                  "offset": 11
+                },
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "PNP_26237Glue.java:57"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@Students"
+            "name": "@26237"
+          }
+        ]
+      },
+      {
+        "line": 14,
+        "name": "Translate save-rescue-configs for Juniper (all platforms)",
+        "description": "",
+        "id": "translate-save-rescue-configs-for-juniper-(all-platforms);translate-save-rescue-configs-for-juniper-(all-platforms);;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: Cannot find file by path: null\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat util.UtilMethods.getFile(UtilMethods.java:15)\n\tat Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)\n\tat ✽.I post save-rescue-config-d-er to translation service(src/test/resources/Features/PNP-26237.feature:6)\n",
+              "duration": 1403039,
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "I post save-rescue-config-d-er to translation service",
+            "match": {
+              "arguments": [
+                {
+                  "val": "save-rescue-config-d-er",
+                  "offset": 7
+                }
+              ],
+              "location": "PNP_26237Glue.java:47"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "I post save-rescue-config-d-er to deciphering service",
+            "match": {
+              "arguments": [
+                {
+                  "val": "save-rescue-config-d-er",
+                  "offset": 7
+                }
+              ],
+              "location": "PNP_26237Glue.java:52"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "I get back dErResp and HTTP 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "dErResp",
+                  "offset": 11
+                },
+                {
+                  "val": "200",
+                  "offset": 28
+                }
+              ],
+              "location": "PNP_26237Glue.java:57"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@26237"
           }
         ]
       }
     ],
-    "name": "API test for setting some students to the service",
+    "name": "Translate save-rescue-configs for Juniper (all platforms)",
     "description": "",
-    "id": "api-test-for-setting-some-students-to-the-service",
+    "id": "translate-save-rescue-configs-for-juniper-(all-platforms)",
     "keyword": "Feature",
-    "uri": "src/test/resources/Features/SetSomeStudents.feature",
+    "uri": "src/test/resources/Features/PNP-26237.feature",
     "tags": [
       {
-        "name": "@Students",
+        "name": "@26237",
         "type": "Tag",
         "location": {
           "line": 1,

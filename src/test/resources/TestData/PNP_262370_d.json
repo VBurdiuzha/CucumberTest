@@ -1,0 +1,30 @@
+{
+  "requestId": "2601",
+  "commands": [
+    {
+      "type": "OPERATION",
+      "partner": "Comcast",
+      "what": "save-rescue-config"
+    }
+  ],
+  "deviceResponses": [
+    {
+      "data": "
+      <rpc-reply>
+        <rescue-management-results>
+          <routing-engine>
+            <name>fpc0</name>
+            <output>
+            success
+            </output>
+          </routing-engine>
+        </rescue-management-results>
+      </rpc-reply>
+      "
+    }
+  ],
+  "device": {
+    "make": "juniper",
+    "model": "mx80"
+  }
+}

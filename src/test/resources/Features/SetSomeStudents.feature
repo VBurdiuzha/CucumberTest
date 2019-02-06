@@ -1,4 +1,4 @@
-@Students
+@CreditCard @Login @Git @Students
 
 Feature: API test for setting some students to the service
 

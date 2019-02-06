@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="Runer.RunTest" time="3.157" errors="0" skipped="0">
+<testsuite tests="3" failures="3" name="Runer.RunTest" time="0.809" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/jre/lib"/>
@@ -64,41 +64,86 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="API test for setting some students to the service" name="Add some students into the list" time="3.157">
-    <failure message="
-Expected: a JSON array
-     got: a JSON object
-" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: a JSON array
-     got: a JSON object
-
-	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:417)
-	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:394)
-	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:336)
-	at Glue.SetSomeStudents_Glue.lambda$new$1(SetSomeStudents_Glue.java:63)
-	at ✽.I should get new list sixStudents after adding(src/test/resources/Features/SetSomeStudents.feature:7)
+  <testcase classname="Translate save-rescue-configs for Juniper (all platforms)(Translate save-rescue-configs for Juniper (all platforms))" name="Translate save-rescue-configs for Juniper (all platforms)(Translate save-rescue-configs for Juniper " time="0.808">
+    <failure message="Cannot find file by path: null" type="java.lang.AssertionError">java.lang.AssertionError: Cannot find file by path: null
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at util.UtilMethods.getFile(UtilMethods.java:15)
+	at Glue.PNP_26237Glue.lambda$new$1(PNP_26237Glue.java:54)
+	at ✽.I post save-rescue-config-t to deciphering service(src/test/resources/Features/PNP-26237.feature:7)
 </failure>
-    <system-out>@Students
-Feature: API test for setting some students to the service
+    <system-out>@26237
+Feature: Translate save-rescue-configs for Juniper (all platforms)
 
-  @Students
-  Scenario: Add some students into the list             &amp;#27;[90m# src/test/resources/Features/SetSomeStudents.feature:5&amp;#27;[0m
-    &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mI add some students &amp;#27;[0m&amp;#27;[32m&amp;#27;[1madd2&amp;#27;[0m                       &amp;#27;[90m# SetSomeStudents_Glue.java:48&amp;#27;[0m
-    &amp;#27;[31mThen &amp;#27;[0m&amp;#27;[31mI should get new list &amp;#27;[0m&amp;#27;[31m&amp;#27;[1msixStudents&amp;#27;[0m&amp;#27;[31m after adding&amp;#27;[0m &amp;#27;[90m# SetSomeStudents_Glue.java:54&amp;#27;[0m
-      &amp;#27;[31mjava.lang.AssertionError: 
-Expected: a JSON array
-     got: a JSON object
+  Scenario Outline: Translate save-rescue-configs for Juniper (all platforms) &amp;#27;[90m# src/test/resources/Features/PNP-26237.feature:4&amp;#27;[0m
+    &amp;#27;[36mWhen I post &lt;payload&gt; to translation service&amp;#27;[0m
+    &amp;#27;[36mWhen I post &lt;payload&gt; to deciphering service&amp;#27;[0m
+    &amp;#27;[36mThen I get back &lt;response&gt; and HTTP &lt;code&gt;&amp;#27;[0m
 
-	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:417)
-	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:394)
-	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:336)
-	at Glue.SetSomeStudents_Glue.lambda$new$1(SetSomeStudents_Glue.java:63)
-	at ✽.I should get new list sixStudents after adding(src/test/resources/Features/SetSomeStudents.feature:7)
+    Examples: 
+
+  @26237
+  Scenario Outline: Translate save-rescue-configs for Juniper (all platforms) &amp;#27;[90m# src/test/resources/Features/PNP-26237.feature:12&amp;#27;[0m
+    &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mI post &amp;#27;[0m&amp;#27;[32m&amp;#27;[1msave-rescue-config-t&amp;#27;[0m&amp;#27;[32m to translation service&amp;#27;[0m                   &amp;#27;[90m# PNP_26237Glue.java:47&amp;#27;[0m
+    &amp;#27;[31mWhen &amp;#27;[0m&amp;#27;[31mI post &amp;#27;[0m&amp;#27;[31m&amp;#27;[1msave-rescue-config-t&amp;#27;[0m&amp;#27;[31m to deciphering service&amp;#27;[0m                   &amp;#27;[90m# PNP_26237Glue.java:52&amp;#27;[0m
+      &amp;#27;[31mjava.lang.AssertionError: Cannot find file by path: null
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at util.UtilMethods.getFile(UtilMethods.java:15)
+	at Glue.PNP_26237Glue.lambda$new$1(PNP_26237Glue.java:54)
+	at ✽.I post save-rescue-config-t to deciphering service(src/test/resources/Features/PNP-26237.feature:7)
 &amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI get back &amp;#27;[0m&amp;#27;[36m&amp;#27;[1mtResp&amp;#27;[0m&amp;#27;[36m and HTTP &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m200&amp;#27;[0m                                        &amp;#27;[90m# PNP_26237Glue.java:57&amp;#27;[0m
 </system-out>
     <system-err>log4j:WARN No appenders could be found for logger (org.apache.http.client.protocol.RequestAddCookies).
 log4j:WARN Please initialize the log4j system properly.
 log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
 </system-err>
+  </testcase>
+  <testcase classname="Translate save-rescue-configs for Juniper (all platforms)(Translate save-rescue-configs for Juniper (all platforms))" name="Translate save-rescue-configs for Juniper (all platforms)(Translate save-rescue-configs for Juniper " time="0">
+    <failure message="Cannot find file by path: null" type="java.lang.AssertionError">java.lang.AssertionError: Cannot find file by path: null
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at util.UtilMethods.getFile(UtilMethods.java:15)
+	at Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)
+	at ✽.I post save-rescue-config-d to translation service(src/test/resources/Features/PNP-26237.feature:6)
+</failure>
+    <system-out>
+  @26237
+  Scenario Outline: Translate save-rescue-configs for Juniper (all platforms) &amp;#27;[90m# src/test/resources/Features/PNP-26237.feature:13&amp;#27;[0m
+    &amp;#27;[31mWhen &amp;#27;[0m&amp;#27;[31mI post &amp;#27;[0m&amp;#27;[31m&amp;#27;[1msave-rescue-config-d&amp;#27;[0m&amp;#27;[31m to translation service&amp;#27;[0m                   &amp;#27;[90m# PNP_26237Glue.java:47&amp;#27;[0m
+      &amp;#27;[31mjava.lang.AssertionError: Cannot find file by path: null
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at util.UtilMethods.getFile(UtilMethods.java:15)
+	at Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)
+	at ✽.I post save-rescue-config-d to translation service(src/test/resources/Features/PNP-26237.feature:6)
+&amp;#27;[0m
+    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI post &amp;#27;[0m&amp;#27;[36m&amp;#27;[1msave-rescue-config-d&amp;#27;[0m&amp;#27;[36m to deciphering service&amp;#27;[0m                   &amp;#27;[90m# PNP_26237Glue.java:52&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI get back &amp;#27;[0m&amp;#27;[36m&amp;#27;[1mdResp&amp;#27;[0m&amp;#27;[36m and HTTP &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m200&amp;#27;[0m                                        &amp;#27;[90m# PNP_26237Glue.java:57&amp;#27;[0m
+</system-out>
+  </testcase>
+  <testcase classname="Translate save-rescue-configs for Juniper (all platforms)(Translate save-rescue-configs for Juniper (all platforms))" name="Translate save-rescue-configs for Juniper (all platforms)(Translate save-rescue-configs for Juniper " time="0.001">
+    <failure message="Cannot find file by path: null" type="java.lang.AssertionError">java.lang.AssertionError: Cannot find file by path: null
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at util.UtilMethods.getFile(UtilMethods.java:15)
+	at Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)
+	at ✽.I post save-rescue-config-d-er to translation service(src/test/resources/Features/PNP-26237.feature:6)
+</failure>
+    <system-out>
+  @26237
+  Scenario Outline: Translate save-rescue-configs for Juniper (all platforms) &amp;#27;[90m# src/test/resources/Features/PNP-26237.feature:14&amp;#27;[0m
+    &amp;#27;[31mWhen &amp;#27;[0m&amp;#27;[31mI post &amp;#27;[0m&amp;#27;[31m&amp;#27;[1msave-rescue-config-d-er&amp;#27;[0m&amp;#27;[31m to translation service&amp;#27;[0m                &amp;#27;[90m# PNP_26237Glue.java:47&amp;#27;[0m
+      &amp;#27;[31mjava.lang.AssertionError: Cannot find file by path: null
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at util.UtilMethods.getFile(UtilMethods.java:15)
+	at Glue.PNP_26237Glue.lambda$new$0(PNP_26237Glue.java:49)
+	at ✽.I post save-rescue-config-d-er to translation service(src/test/resources/Features/PNP-26237.feature:6)
+&amp;#27;[0m
+    &amp;#27;[36mWhen &amp;#27;[0m&amp;#27;[36mI post &amp;#27;[0m&amp;#27;[36m&amp;#27;[1msave-rescue-config-d-er&amp;#27;[0m&amp;#27;[36m to deciphering service&amp;#27;[0m                &amp;#27;[90m# PNP_26237Glue.java:52&amp;#27;[0m
+    &amp;#27;[36mThen &amp;#27;[0m&amp;#27;[36mI get back &amp;#27;[0m&amp;#27;[36m&amp;#27;[1mdErResp&amp;#27;[0m&amp;#27;[36m and HTTP &amp;#27;[0m&amp;#27;[36m&amp;#27;[1m200&amp;#27;[0m                                      &amp;#27;[90m# PNP_26237Glue.java:57&amp;#27;[0m
+</system-out>
   </testcase>
 </testsuite>

@@ -1,0 +1,15 @@
+{
+  "requestId": "TEST_REQUEST_ID",
+  "actionType": "COMMAND",
+  "commands": [
+    {
+      "type": "OPERATION",
+      "partner": "Comcast",
+      "what": "save-rescue-config"
+    }
+  ],
+  "device": {
+    "make": "juniper",
+    "model": "mx80"
+  }
+}
