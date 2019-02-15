@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="1.443287">
-<testcase classname="Translate save-rescue-configs for Juniper (all platforms)" name="Translate save-rescue-configs for Juniper translation service (all platforms)" time="1.336425">
-<system-out><![CDATA[When I post save-rescue-config-t to translation service.....................passed
-Then I get back tResp and HTTP 200 from translation service.................passed
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="1.343456">
+<testcase classname="Translate/Decipher BFD on Cisco" name="Translate payload for BFD on Cisco translation service" time="1.262387">
+<system-out><![CDATA[When I post payload to translation service!.................................passed
+Then I get back TR24115 and HTTP 200 from translation service!..............passed
 ]]></system-out>
 </testcase>
-<testcase classname="Translate save-rescue-configs for Juniper (all platforms)" name="Translate save-rescue-configs for Juniper deciphering service (all platforms)" time="0.057573">
-<system-out><![CDATA[When I post save-rescue-config-d to deciphering service.....................passed
-Then I get back dResp and HTTP 200 from deciphering service.................passed
-]]></system-out>
-</testcase>
-<testcase classname="Translate save-rescue-configs for Juniper (all platforms)" name="Translate save-rescue-configs for Juniper deciphering service (all platforms) 2" time="0.049289">
-<system-out><![CDATA[When I post save-rescue-config-d-er to deciphering service..................passed
-Then I get back dErResp and HTTP 200 from deciphering service...............passed
-]]></system-out>
+<testcase classname="Translate/Decipher BFD on Cisco" name="Translate payload for BFD on Cisco deciphering service" time="0.081069">
+<failure message="java.lang.AssertionError: response.bfd.interfaces.interface[]: Expected 1 values but got 22&#10;&#9;at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:417)&#10;&#9;at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:394)&#10;&#9;at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:336)&#10;&#9;at Glue.TD24115Glue.lambda$new$3(TD24115Glue.java:78)&#10;&#9;at ✽.I get back DR24115 and HTTP 200 from deciphering service!(src/test/resources/Features/TD24115.feature:17)&#10;"><![CDATA[When I post commands to deciphering service!................................passed
+Then I get back DR24115 and HTTP 200 from deciphering service!..............failed
+
+StackTrace:
+java.lang.AssertionError: response.bfd.interfaces.interface[]: Expected 1 values but got 22
+	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:417)
+	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:394)
+	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:336)
+	at Glue.TD24115Glue.lambda$new$3(TD24115Glue.java:78)
+	at ✽.I get back DR24115 and HTTP 200 from deciphering service!(src/test/resources/Features/TD24115.feature:17)
+]]></failure>
 </testcase>
 </testsuite>

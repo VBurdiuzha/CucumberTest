@@ -3,6 +3,7 @@ Glue/API_GitGlue.class
 Glue/LoginGlue$User.class
 Glue/CreditCardGlue.class
 com/ea/Depot.class
+Glue/PNP_24130Glue.class
 Glue/PNP_26237Glue.class
 Glue/LoginGlue.class
 Glue/API_testGlue.class

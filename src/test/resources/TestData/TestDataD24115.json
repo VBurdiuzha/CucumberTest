@@ -1,0 +1,25 @@
+{
+  "commands" :[ {
+    "type" : "GET",
+    "what" : "running configuration",
+    "partner" : "Comcast",
+    "RequestId" : "1",
+    "parameters" : [
+    ]
+  }],
+  "deviceResponses" :[ {
+    "data" : "interface ge-0/0/0 bfd
+bfd mode ietf
+bfd multiplier 3
+bfd destination 1.1.1.1
+bfd fast-detect
+bfd minimum-interval 50
+!
+    "
+  }],
+  "device" : {
+    "make" : "cisco",
+    "model" : "ASR-9006-DC-V2"
+  },
+  "requestId": "5ba586a7-451d-4c5e-b9e0-b455376d2cda"
+}

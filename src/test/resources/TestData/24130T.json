@@ -1,0 +1,602 @@
+{
+  "requestId": "00000000-0000-0000-0000-dd0000aa0174",
+  "actionType": "COMMAND",
+  "device": {
+    "model": "ASR-9010-AC-V2",
+    "make": "cisco",
+    "os": "IOS-XR",
+    "osVersion": null
+  },
+  "commands": [
+    {
+      "type": "CONFIGURE",
+      "partner": "Comcast",
+      "sessionId": "SNP-1545849515538"
+    },
+    {
+      "type": "EDIT_CONFIG",
+      "partner": "Comcast",
+      "configuration": {
+"telemetry-system": {
+    "destination-groups": {
+      "destination-group": [
+        {
+          "config": {
+            "group-id": "0"
+          },
+          "group-id": "0",
+          "destinations": {
+            "destination": [
+              {
+                "destination-port": 4444,
+                "destination-address": "96.112.246.57",
+                "config": {
+                  "destination-port": 4444,
+                  "destination-address": "96.112.246.57"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "sensor-groups": {
+      "sensor-group": [
+        {
+          "sensor-group-id": "10",
+          "config": {
+            "sensor-group-id": "10"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/neighbors/neighbor",
+                "config": {
+                  "path": "Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/neighbors/neighbor"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/global-process-info/global/local-as",
+                "config": {
+                  "path": "Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/global-process-info/global/local-as"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "20",
+          "config": {
+            "sensor-group-id": "20"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-cdp-oper:cdp/nodes/node/neighbors/details/detail/device-id",
+                "config": {
+                  "path": "Cisco-IOS-XR-cdp-oper:cdp/nodes/node/neighbors/details/detail/device-id"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-cdp-oper:cdp/nodes/node/neighbors/details/detail/cdp-neighbor/port-id",
+                "config": {
+                  "path": "Cisco-IOS-XR-cdp-oper:cdp/nodes/node/neighbors/details/detail/cdp-neighbor/port-id"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-cdp-oper:cdp/nodes/node/neighbors/details/detail/cdp-neighbor/detail/network-addresses/cdp-addr-entry/address/ipv4-address",
+                "config": {
+                  "path": "Cisco-IOS-XR-cdp-oper:cdp/nodes/node/neighbors/details/detail/cdp-neighbor/detail/network-addresses/cdp-addr-entry/address/ipv4-address"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "30",
+          "config": {
+            "sensor-group-id": "30"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization",
+                "config": {
+                  "path": "Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "40",
+          "config": {
+            "sensor-group-id": "40"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/member-interfaces/member-interface/input",
+                "config": {
+                  "path": "Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/member-interfaces/member-interface/input"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/member-interfaces/member-interface/output",
+                "config": {
+                  "path": "Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/member-interfaces/member-interface/output"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/input/service-policy-names/service-policy-instance/statistics",
+                "config": {
+                  "path": "Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/input/service-policy-names/service-policy-instance/statistics"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/output/service-policy-names/service-policy-instance/statistics",
+                "config": {
+                  "path": "Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/output/service-policy-names/service-policy-instance/statistics"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "50",
+          "config": {
+            "sensor-group-id": "50"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-ip-tcp-oper:tcp/nodes/node/statistics/ipv4-traffic",
+                "config": {
+                  "path": "Cisco-IOS-XR-ip-tcp-oper:tcp/nodes/node/statistics/ipv4-traffic"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-ip-tcp-oper:tcp/nodes/node/statistics/ipv6-traffic",
+                "config": {
+                  "path": "Cisco-IOS-XR-ip-tcp-oper:tcp/nodes/node/statistics/ipv6-traffic"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-ip-tcp-oper:tcp-connection/nodes/node/statistics/summary",
+                "config": {
+                  "path": "Cisco-IOS-XR-ip-tcp-oper:tcp-connection/nodes/node/statistics/summary"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "60",
+          "config": {
+            "sensor-group-id": "60"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-ip-udp-oper:udp/nodes/node/statistics/ipv4-traffic",
+                "config": {
+                  "path": "Cisco-IOS-XR-ip-udp-oper:udp/nodes/node/statistics/ipv4-traffic"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-ip-udp-oper:udp/nodes/node/statistics/ipv6-traffic",
+                "config": {
+                  "path": "Cisco-IOS-XR-ip-udp-oper:udp/nodes/node/statistics/ipv6-traffic"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-ip-udp-oper:udp-connection/nodes/node/statistics/summary",
+                "config": {
+                  "path": "Cisco-IOS-XR-ip-udp-oper:udp-connection/nodes/node/statistics/summary"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "70",
+          "config": {
+            "sensor-group-id": "70"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-ipv4-io-oper:ipv4-network/nodes/node/statistics/traffic/icmp-stats",
+                "config": {
+                  "path": "Cisco-IOS-XR-ipv4-io-oper:ipv4-network/nodes/node/statistics/traffic/icmp-stats"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "80",
+          "config": {
+            "sensor-group-id": "80"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-ipv4-io-oper:ipv4-network/nodes/node/interface-data",
+                "config": {
+                  "path": "Cisco-IOS-XR-ipv4-io-oper:ipv4-network/nodes/node/interface-data"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "90",
+          "config": {
+            "sensor-group-id": "90"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-ipv6-io-oper:ipv6-io/nodes/node/statistics/traffic",
+                "config": {
+                  "path": "Cisco-IOS-XR-ipv6-io-oper:ipv6-io/nodes/node/statistics/traffic"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "100",
+          "config": {
+            "sensor-group-id": "100"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-ethernet-lldp-oper:lldp/nodes/node/neighbors/devices/device",
+                "config": {
+                  "path": "Cisco-IOS-XR-ethernet-lldp-oper:lldp/nodes/node/neighbors/devices/device"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "110",
+          "config": {
+            "sensor-group-id": "110"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-ipv4-ospf-oper:ospf/processes/process/default-vrf/ospf-summary",
+                "config": {
+                  "path": "Cisco-IOS-XR-ipv4-ospf-oper:ospf/processes/process/default-vrf/ospf-summary"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-ipv4-ospf-oper:ospf/processes/process/vrfs/vrf/summary-prefixes",
+                "config": {
+                  "path": "Cisco-IOS-XR-ipv4-ospf-oper:ospf/processes/process/vrfs/vrf/summary-prefixes"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-ipv4-ospf-oper:ospf/processes/process/vrfs/vrf/adjacency-information",
+                "config": {
+                  "path": "Cisco-IOS-XR-ipv4-ospf-oper:ospf/processes/process/vrfs/vrf/adjacency-information"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "120",
+          "config": {
+            "sensor-group-id": "120"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-snmp-agent-oper:snmp/information/statistics",
+                "config": {
+                  "path": "Cisco-IOS-XR-snmp-agent-oper:snmp/information/statistics"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "130",
+          "config": {
+            "sensor-group-id": "130"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-bundlemgr-oper:bundle-information",
+                "config": {
+                  "path": "Cisco-IOS-XR-bundlemgr-oper:bundle-information"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-bundlemgr-oper:bundles/bundles/bundle",
+                "config": {
+                  "path": "Cisco-IOS-XR-bundlemgr-oper:bundles/bundles/bundle"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "140",
+          "config": {
+            "sensor-group-id": "140"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-sysadmin-envmon-ui:/environment",
+                "config": {
+                  "path": "Cisco-IOS-XR-sysadmin-envmon-ui:/environment"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "150",
+          "config": {
+            "sensor-group-id": "150"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-procmem-oper:processes-memory/nodes/node/process-ids/process-id",
+                "config": {
+                  "path": "Cisco-IOS-XR-procmem-oper:processes-memory/nodes/node/process-ids/process-id"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "160",
+          "config": {
+            "sensor-group-id": "160"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "Cisco-IOS-XR-snmp-agent-oper:snmp/information/system-oid",
+                "config": {
+                  "path": "Cisco-IOS-XR-snmp-agent-oper:snmp/information/system-oid"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-snmp-agent-oper:snmp/information/system-descr",
+                "config": {
+                  "path": "Cisco-IOS-XR-snmp-agent-oper:snmp/information/system-descr"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-snmp-agent-oper:snmp/information/system-up-time",
+                "config": {
+                  "path": "Cisco-IOS-XR-snmp-agent-oper:snmp/information/system-up-time"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sensor-group-id": "170",
+          "config": {
+            "sensor-group-id": "170"
+          },
+          "sensor-paths": {
+            "sensor-path": [
+              {
+                "path": "openconfig-interfaces:interfaces/interface",
+                "config": {
+                  "path": "openconfig-interfaces:interfaces/interface"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-bundlemgr-oper:bundle-information",
+                "config": {
+                  "path": "Cisco-IOS-XR-bundlemgr-oper:bundle-information"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-xr/interface",
+                "config": {
+                  "path": "Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-xr/interface"
+                }
+              },
+              {
+                "path": "Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/generic-counters",
+                "config": {
+                  "path": "Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/generic-counters"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "subscriptions": {
+      "persistent": {
+        "subscription": [
+          {
+            "subscription-name": "SubSNP",
+            "config": {
+              "subscription-name": "SubSNP"
+            },
+            "sensor-profiles": {
+              "sensor-profile": [
+                {
+                  "sensor-group": "10",
+                  "config": {
+                    "sensor-group": "10",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "20",
+                  "config": {
+                    "sensor-group": "20",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "30",
+                  "config": {
+                    "sensor-group": "30",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "40",
+                  "config": {
+                    "sensor-group": "40",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "50",
+                  "config": {
+                    "sensor-group": "50",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "60",
+                  "config": {
+                    "sensor-group": "60",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "70",
+                  "config": {
+                    "sensor-group": "70",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "80",
+                  "config": {
+                    "sensor-group": "80",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "90",
+                  "config": {
+                    "sensor-group": "90",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "100",
+                  "config": {
+                    "sensor-group": "100",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "110",
+                  "config": {
+                    "sensor-group": "110",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "120",
+                  "config": {
+                    "sensor-group": "120",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "130",
+                  "config": {
+                    "sensor-group": "130",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "140",
+                  "config": {
+                    "sensor-group": "140",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "150",
+                  "config": {
+                    "sensor-group": "150",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "160",
+                  "config": {
+                    "sensor-group": "160",
+                    "sample-interval": "6000"
+                  }
+                },
+                {
+                  "sensor-group": "170",
+                  "config": {
+                    "sensor-group": "170",
+                    "sample-interval": "6000"
+                  }
+                }
+              ]
+            },
+            "destination-groups": {
+              "destination-group": [
+                {
+                  "config": {
+                    "group-id": "0"
+                  },
+                  "group-id": "0"
+                }
+              ]
+            }
+          },
+          {
+            "subscription-name": "Comcast",
+            "config": {
+              "subscription-name": "Comcast"
+            },
+            "destination-groups": {
+              "destination-group": [
+                {
+                  "config": {
+                    "group-id": "0"
+                  },
+                  "group-id": "0"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+      }
+
+    },
+    {
+      "type": "COMMIT_CONFIRM",
+      "partner": "Comcast",
+      "secondsUntilRevert": null
+    },
+    {
+      "type": "COMMIT",
+      "partner": "Comcast"
+    }
+  ]
+}

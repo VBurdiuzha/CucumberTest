@@ -1,0 +1,48 @@
+{
+ "requestId": "00000000-0000-0000-0000-dd0000aa0174",
+ "actionType": "COMMAND",
+ "device": {
+   "model": "ASR-9010-AC-V2",
+   "make": "cisco",
+   "os": null,
+   "osVersion": null
+ },
+ "commands": [
+   {
+     "type": "CONFIGURE",
+     "partner": "Comcast",
+     "sessionId": "SNP-1545849515538"
+   },
+   {
+     "type": "EDIT_CONFIG",
+     "partner": "Comcast",
+     "configuration": {
+"bfd": {
+    "interfaces": {
+      "interface": [
+        {
+          "config": {
+            "enabled": true,
+            "desired-minimum-tx-interval": 50,
+            "detection-multiplier": 3,
+            "remote-address": "1.1.1.1",
+            "id": "ge-0/0/0"
+          },
+          "id": "ge-0/0/1"
+        }
+      ]
+    }
+  }
+     }
+   },
+   {
+     "type": "COMMIT_CONFIRM",
+     "partner": "Comcast",
+     "secondsUntilRevert": null
+   },
+   {
+     "type": "COMMIT",
+     "partner": "Comcast"
+   }
+ ]
+}

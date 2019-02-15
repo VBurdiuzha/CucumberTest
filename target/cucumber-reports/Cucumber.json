@@ -4,151 +4,41 @@
     "elements": [
       {
         "line": 11,
-        "name": "Translate save-rescue-configs for Juniper translation service (all platforms)",
+        "name": "Translate payload for BFD on Cisco translation service",
         "description": "",
-        "id": "translate-save-rescue-configs-for-juniper-(all-platforms);translate-save-rescue-configs-for-juniper-translation-service-(all-platforms);;2",
+        "id": "translate/decipher-bfd-on-cisco;translate-payload-for-bfd-on-cisco-translation-service;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1173999926,
+              "duration": 1187690755,
               "status": "passed"
             },
             "line": 6,
-            "name": "I post save-rescue-config-t to translation service",
+            "name": "I post payload to translation service!",
             "match": {
               "arguments": [
                 {
-                  "val": "save-rescue-config-t",
+                  "val": "payload",
                   "offset": 7
                 }
               ],
-              "location": "PNP_26237Glue.java:47"
+              "location": "TD24115Glue.java:44"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 67809853,
+              "duration": 28257617,
               "status": "passed"
             },
             "line": 7,
-            "name": "I get back tResp and HTTP 200 from translation service",
+            "name": "I get back TR24115 and HTTP 200 from translation service!",
             "match": {
               "arguments": [
                 {
-                  "val": "tResp",
-                  "offset": 11
-                },
-                {
-                  "val": "200",
-                  "offset": 26
-                }
-              ],
-              "location": "PNP_26237Glue.java:58"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@26237"
-          }
-        ]
-      },
-      {
-        "line": 21,
-        "name": "Translate save-rescue-configs for Juniper deciphering service (all platforms)",
-        "description": "",
-        "id": "translate-save-rescue-configs-for-juniper-(all-platforms);translate-save-rescue-configs-for-juniper-deciphering-service-(all-platforms);;2",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 30198910,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "I post save-rescue-config-d to deciphering service",
-            "match": {
-              "arguments": [
-                {
-                  "val": "save-rescue-config-d",
-                  "offset": 7
-                }
-              ],
-              "location": "PNP_26237Glue.java:52"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 1716129,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I get back dResp and HTTP 200 from deciphering service",
-            "match": {
-              "arguments": [
-                {
-                  "val": "dResp",
-                  "offset": 11
-                },
-                {
-                  "val": "200",
-                  "offset": 26
-                }
-              ],
-              "location": "PNP_26237Glue.java:69"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@26237"
-          }
-        ]
-      },
-      {
-        "line": 22,
-        "name": "Translate save-rescue-configs for Juniper deciphering service (all platforms)",
-        "description": "",
-        "id": "translate-save-rescue-configs-for-juniper-(all-platforms);translate-save-rescue-configs-for-juniper-deciphering-service-(all-platforms);;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
-          {
-            "result": {
-              "duration": 36383668,
-              "status": "passed"
-            },
-            "line": 16,
-            "name": "I post save-rescue-config-d-er to deciphering service",
-            "match": {
-              "arguments": [
-                {
-                  "val": "save-rescue-config-d-er",
-                  "offset": 7
-                }
-              ],
-              "location": "PNP_26237Glue.java:52"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 8923530,
-              "status": "passed"
-            },
-            "line": 17,
-            "name": "I get back dErResp and HTTP 200 from deciphering service",
-            "match": {
-              "arguments": [
-                {
-                  "val": "dErResp",
+                  "val": "TR24115",
                   "offset": 11
                 },
                 {
@@ -156,26 +46,82 @@
                   "offset": 28
                 }
               ],
-              "location": "PNP_26237Glue.java:69"
+              "location": "TD24115Glue.java:55"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@26237"
+            "name": "@TD24115"
+          }
+        ]
+      },
+      {
+        "line": 21,
+        "name": "Translate payload for BFD on Cisco deciphering service",
+        "description": "",
+        "id": "translate/decipher-bfd-on-cisco;translate-payload-for-bfd-on-cisco-deciphering-service;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 36738941,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I post commands to deciphering service!",
+            "match": {
+              "arguments": [
+                {
+                  "val": "commands",
+                  "offset": 7
+                }
+              ],
+              "location": "TD24115Glue.java:49"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: response.bfd.interfaces.interface[]: Expected 1 values but got 22\n\tat org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:417)\n\tat org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:394)\n\tat org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:336)\n\tat Glue.TD24115Glue.lambda$new$3(TD24115Glue.java:78)\n\tat ✽.I get back DR24115 and HTTP 200 from deciphering service!(src/test/resources/Features/TD24115.feature:17)\n",
+              "duration": 22828012,
+              "status": "failed"
+            },
+            "line": 17,
+            "name": "I get back DR24115 and HTTP 200 from deciphering service!",
+            "match": {
+              "arguments": [
+                {
+                  "val": "DR24115",
+                  "offset": 11
+                },
+                {
+                  "val": "200",
+                  "offset": 28
+                }
+              ],
+              "location": "TD24115Glue.java:66"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TD24115"
           }
         ]
       }
     ],
-    "name": "Translate save-rescue-configs for Juniper (all platforms)",
+    "name": "Translate/Decipher BFD on Cisco",
     "description": "",
-    "id": "translate-save-rescue-configs-for-juniper-(all-platforms)",
+    "id": "translate/decipher-bfd-on-cisco",
     "keyword": "Feature",
-    "uri": "src/test/resources/Features/PNP-26237.feature",
+    "uri": "src/test/resources/Features/TD24115.feature",
     "tags": [
       {
-        "name": "@26237",
+        "name": "@TD24115",
         "type": "Tag",
         "location": {
           "line": 1,

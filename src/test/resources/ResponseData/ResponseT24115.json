@@ -1,0 +1,80 @@
+{
+    "requestId": "00000000-0000-0000-0000-dd0000aa0174",
+    "commandTranslations": [
+        {
+            "commands": [
+                {
+                    "type": "CONFIGURE",
+                    "partner": "Comcast",
+                    "sessionId": "SNP-1545849515538"
+                }
+            ],
+            "deviceCommands": [
+                {
+                    "type": "CLI",
+                    "command": "terminal length 0\nconfigure\n"
+                }
+            ]
+        },
+        {
+            "commands": [
+                {
+                    "type": "EDIT_CONFIG",
+                    "partner": "Comcast",
+                    "configuration": {
+                        "bfd": {
+                            "interfaces": {
+                                "interface": [
+                                    {
+                                        "id": "ge-0/0/1",
+                                        "config": {
+                                            "enabled": true,
+                                            "id": "ge-0/0/0",
+                                            "desired-minimum-tx-interval": 50,
+                                            "detection-multiplier": 3,
+                                            "remote-address": "1.1.1.1"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            ],
+            "deviceCommands": [
+                {
+                    "type": "CLI",
+                    "command": "interface ge-0/0/0 bfd\ninterface ge-0/0/0 bfd mode ietf\ninterface ge-0/0/0 bfd address-family ipv4 multiplier 3\ninterface ge-0/0/0 bfd address-family ipv4 destination 1.1.1.1\ninterface ge-0/0/0 bfd address-family ipv4 fast-detect\ninterface ge-0/0/0 bfd address-family ipv4 minimum-interval 50\n"
+                }
+            ]
+        },
+        {
+            "commands": [
+                {
+                    "type": "COMMIT_CONFIRM",
+                    "partner": "Comcast"
+                }
+            ],
+            "deviceCommands": [
+                {
+                    "type": "CLI",
+                    "command": "commit confirmed 30\n"
+                }
+            ]
+        },
+        {
+            "commands": [
+                {
+                    "type": "COMMIT",
+                    "partner": "Comcast"
+                }
+            ],
+            "deviceCommands": [
+                {
+                    "type": "CLI",
+                    "command": "commit\nexit\n"
+                }
+            ]
+        }
+    ]
+}

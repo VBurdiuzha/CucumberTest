@@ -1,25 +1,25 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/Features/PNP-26237.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/Features/TD24115.feature");
 formatter.feature({
-  "name": "Translate save-rescue-configs for Juniper (all platforms)",
+  "name": "Translate/Decipher BFD on Cisco",
   "description": "",
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@26237"
+      "name": "@TD24115"
     }
   ]
 });
 formatter.scenarioOutline({
-  "name": "Translate save-rescue-configs for Juniper translation service (all platforms)",
+  "name": "Translate payload for BFD on Cisco translation service",
   "description": "",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "name": "I post \u003cpayload\u003e to translation service",
+  "name": "I post \u003cpayload\u003e to translation service!",
   "keyword": "When "
 });
 formatter.step({
-  "name": "I get back \u003cresponse\u003e and HTTP \u003ccode\u003e from translation service",
+  "name": "I get back \u003cresponse\u003e and HTTP \u003ccode\u003e from translation service!",
   "keyword": "Then "
 });
 formatter.examples({
@@ -37,8 +37,8 @@ formatter.examples({
     },
     {
       "cells": [
-        "save-rescue-config-t",
-        "tResp",
+        "payload",
+        "TR24115",
         "",
         "200"
       ]
@@ -46,46 +46,46 @@ formatter.examples({
   ]
 });
 formatter.scenario({
-  "name": "Translate save-rescue-configs for Juniper translation service (all platforms)",
+  "name": "Translate payload for BFD on Cisco translation service",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@26237"
+      "name": "@TD24115"
     }
   ]
 });
 formatter.step({
-  "name": "I post save-rescue-config-t to translation service",
+  "name": "I post payload to translation service!",
   "keyword": "When "
 });
 formatter.match({
-  "location": "PNP_26237Glue.java:47"
+  "location": "TD24115Glue.java:44"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I get back tResp and HTTP 200 from translation service",
+  "name": "I get back TR24115 and HTTP 200 from translation service!",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "PNP_26237Glue.java:58"
+  "location": "TD24115Glue.java:55"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.scenarioOutline({
-  "name": "Translate save-rescue-configs for Juniper deciphering service (all platforms)",
+  "name": "Translate payload for BFD on Cisco deciphering service",
   "description": "",
   "keyword": "Scenario Outline"
 });
 formatter.step({
-  "name": "I post \u003cpayload\u003e to deciphering service",
+  "name": "I post \u003cpayload\u003e to deciphering service!",
   "keyword": "When "
 });
 formatter.step({
-  "name": "I get back \u003cresponse\u003e and HTTP \u003ccode\u003e from deciphering service",
+  "name": "I get back \u003cresponse\u003e and HTTP \u003ccode\u003e from deciphering service!",
   "keyword": "Then "
 });
 formatter.examples({
@@ -103,16 +103,8 @@ formatter.examples({
     },
     {
       "cells": [
-        "save-rescue-config-d",
-        "dResp",
-        "",
-        "200"
-      ]
-    },
-    {
-      "cells": [
-        "save-rescue-config-d-er",
-        "dErResp",
+        "commands",
+        "DR24115",
         "",
         "200"
       ]
@@ -120,63 +112,34 @@ formatter.examples({
   ]
 });
 formatter.scenario({
-  "name": "Translate save-rescue-configs for Juniper deciphering service (all platforms)",
+  "name": "Translate payload for BFD on Cisco deciphering service",
   "description": "",
   "keyword": "Scenario Outline",
   "tags": [
     {
-      "name": "@26237"
+      "name": "@TD24115"
     }
   ]
 });
 formatter.step({
-  "name": "I post save-rescue-config-d to deciphering service",
+  "name": "I post commands to deciphering service!",
   "keyword": "When "
 });
 formatter.match({
-  "location": "PNP_26237Glue.java:52"
+  "location": "TD24115Glue.java:49"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I get back dResp and HTTP 200 from deciphering service",
+  "name": "I get back DR24115 and HTTP 200 from deciphering service!",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "PNP_26237Glue.java:69"
+  "location": "TD24115Glue.java:66"
 });
 formatter.result({
-  "status": "passed"
-});
-formatter.scenario({
-  "name": "Translate save-rescue-configs for Juniper deciphering service (all platforms)",
-  "description": "",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "name": "@26237"
-    }
-  ]
-});
-formatter.step({
-  "name": "I post save-rescue-config-d-er to deciphering service",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "PNP_26237Glue.java:52"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "I get back dErResp and HTTP 200 from deciphering service",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "PNP_26237Glue.java:69"
-});
-formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.AssertionError: response.bfd.interfaces.interface[]: Expected 1 values but got 22\n\tat org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:417)\n\tat org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:394)\n\tat org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:336)\n\tat Glue.TD24115Glue.lambda$new$3(TD24115Glue.java:78)\n\tat ✽.I get back DR24115 and HTTP 200 from deciphering service!(src/test/resources/Features/TD24115.feature:17)\n",
+  "status": "failed"
 });
 });

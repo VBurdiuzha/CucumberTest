@@ -1,4 +1,4 @@
-@26237
+@PNP_26237
 Feature: Translate save-rescue-configs for Juniper (all platforms)
 
   Scenario Outline: Translate save-rescue-configs for Juniper translation service (all platforms)

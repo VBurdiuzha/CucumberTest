@@ -1,0 +1,79 @@
+{
+    "requestId": "5ba586a7-451d-4c5e-b9e0-b455376d2cda",
+    "type": "GET",
+    "successful": true,
+    "objectType": "OpenConfigTop",
+    "response": {
+        "interfaces": {
+            "interface": []
+        },
+        "acl": {
+            "acl-sets": {
+                "acl-set": []
+            }
+        },
+        "flow": {},
+        "igmp": {},
+        "lldp": {
+            "interfaces": {
+                "interface": []
+            }
+        },
+        "pim": {},
+        "qos": {},
+        "system": {},
+        "bfd": {
+            "interfaces": {
+                "interface": [
+                    {
+                        "id": "ge-0/0/0",
+                        "config": {
+                            "enabled": true,
+                            "id": "ge-0/0/0",
+                            "desired-minimum-tx-interval": 50,
+                            "detection-multiplier": 3,
+                            "remote-address": "1.1.1.1"
+                        }
+                    }
+                     ]
+            }
+        },
+        "relay-agent": {
+            "dhcp": {
+                "interfaces": {
+                    "interface": []
+                }
+            }
+        },
+        "routing-policy": {},
+        "network-instances": {
+            "network-instance": [
+                {
+                    "name": "ISIS",
+                    "protocols": {
+                        "protocol": [
+                            {
+                                "name": "RAN",
+                                "identifier": "ISIS",
+                                "isis": {
+                                    "interfaces": {
+                                        "interface": []
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "BGP"
+                },
+                {
+                    "name": "MPLS",
+                    "mpls": {
+                        "signaling-protocols": {}
+                    }
+                }
+            ]
+        }
+    }
+}

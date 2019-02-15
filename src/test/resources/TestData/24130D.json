@@ -1,0 +1,118 @@
+{
+  "commands" :[ {
+    "type" : "GET",
+    "what" : "running configuration",
+    "partner" : "Comcast",
+    "RequestId" : "1",
+    "parameters" : [
+    ]
+  }],
+  "deviceResponses" :[ {
+    "data" : "telemetry model-driven
+    telemetry model-driven destination-group DGroupSNP
+    ! Need to replace with production destination
+    ! Will also need East and West
+    telemetry model-driven destination-group DGroupSNP address-family ipv4 96.112.246.57 port 4444
+    telemetry model-driven destination-group DGroupSNP encoding self-describing-gpb
+    telemetry model-driven destination-group DGroupSNP protocol grpc no-tls
+    !
+    !
+    telemetry model-driven sensor-group Comcast-BGP
+    telemetry model-driven sensor-group Comcast-BGP sensor-path Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/neighbors/neighbor
+    ! Have a enhancement DDTS for this as you can't get any lower in the yang tree
+    telemetry model-driven sensor-group Comcast-BGP sensor-path Cisco-IOS-XR-ipv4-bgp-oper:bgp/instances/instance/instance-active/default-vrf/global-process-info/global/local-as
+    !
+    telemetry model-driven sensor-group Comcast-CDP
+    telemetry model-driven sensor-group Comcast-CDP sensor-path Cisco-IOS-XR-cdp-oper:cdp/nodes/node/neighbors/details/detail/device-id
+    telemetry model-driven sensor-group Comcast-CDP sensor-path Cisco-IOS-XR-cdp-oper:cdp/nodes/node/neighbors/details/detail/cdp-neighbor/port-id
+    telemetry model-driven sensor-group Comcast-CDP sensor-path Cisco-IOS-XR-cdp-oper:cdp/nodes/node/neighbors/details/detail/cdp-neighbor/detail/network-addresses/cdp-addr-entry/address/ipv4-address
+    !
+    telemetry model-driven sensor-group Comcast-CPU
+    telemetry model-driven sensor-group Comcast-CPU sensor-path Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization
+    !
+    telemetry model-driven sensor-group Comcast-QOS
+    telemetry model-driven sensor-group Comcast-QOS sensor-path Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/member-interfaces/member-interface/input
+    telemetry model-driven sensor-group Comcast-QOS sensor-path Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/member-interfaces/member-interface/output
+    telemetry model-driven sensor-group Comcast-QOS sensor-path Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/input/service-policy-names/service-policy-instance/statistics
+    telemetry model-driven sensor-group Comcast-QOS sensor-path Cisco-IOS-XR-qos-ma-oper:qos/interface-table/interface/output/service-policy-names/service-policy-instance/statistics
+    !
+    telemetry model-driven sensor-group Comcast-TCP
+    telemetry model-driven sensor-group Comcast-TCP sensor-path Cisco-IOS-XR-ip-tcp-oper:tcp/nodes/node/statistics/ipv4-traffic
+    telemetry model-driven sensor-group Comcast-TCP sensor-path Cisco-IOS-XR-ip-tcp-oper:tcp/nodes/node/statistics/ipv6-traffic
+    telemetry model-driven sensor-group Comcast-TCP sensor-path Cisco-IOS-XR-ip-tcp-oper:tcp-connection/nodes/node/statistics/summary
+    !
+    telemetry model-driven sensor-group Comcast-UDP
+    telemetry model-driven sensor-group Comcast-UDP sensor-path Cisco-IOS-XR-ip-udp-oper:udp/nodes/node/statistics/ipv4-traffic
+    telemetry model-driven sensor-group Comcast-UDP sensor-path Cisco-IOS-XR-ip-udp-oper:udp/nodes/node/statistics/ipv6-traffic
+    telemetry model-driven sensor-group Comcast-UDP sensor-path Cisco-IOS-XR-ip-udp-oper:udp-connection/nodes/node/statistics/summary
+    !
+    telemetry model-driven sensor-group Comcast-ICMP
+    telemetry model-driven sensor-group Comcast-ICMP sensor-path Cisco-IOS-XR-ipv4-io-oper:ipv4-network/nodes/node/statistics/traffic/icmp-stats
+    !
+    telemetry model-driven sensor-group Comcast-IPv4
+    telemetry model-driven sensor-group Comcast-IPv4 sensor-path Cisco-IOS-XR-ipv4-io-oper:ipv4-network/nodes/node/interface-data
+    !
+    telemetry model-driven sensor-group Comcast-IPv6
+    telemetry model-driven sensor-group Comcast-IPv6 sensor-path Cisco-IOS-XR-ipv6-io-oper:ipv6-io/nodes/node/statistics/traffic
+    !
+    telemetry model-driven sensor-group Comcast-IPv6
+    telemetry model-driven sensor-group Comcast-IPv6 sensor-path Cisco-IOS-XR-ethernet-lldp-oper:lldp/nodes/node/neighbors/devices/device
+    !
+    telemetry model-driven sensor-group Comcast-OSPF
+    telemetry model-driven sensor-group Comcast-OSPF sensor-path Cisco-IOS-XR-ipv4-ospf-oper:ospf/processes/process/default-vrf/ospf-summary
+    telemetry model-driven sensor-group Comcast-OSPF sensor-path Cisco-IOS-XR-ipv4-ospf-oper:ospf/processes/process/vrfs/vrf/summary-prefixes
+    telemetry model-driven sensor-group Comcast-OSPF sensor-path Cisco-IOS-XR-ipv4-ospf-oper:ospf/processes/process/vrfs/vrf/adjacency-information
+    !
+    telemetry model-driven sensor-group Comcast-SNMP
+    !Not sure if you will need this if you moving totally from SNMP
+    telemetry model-driven sensor-group Comcast-SNMP sensor-path Cisco-IOS-XR-snmp-agent-oper:snmp/information/statistics
+    !
+    telemetry model-driven sensor-group Comcast-BUNDLE
+    telemetry model-driven sensor-group Comcast-BUNDLE sensor-path Cisco-IOS-XR-bundlemgr-oper:bundle-information
+    telemetry model-driven sensor-group Comcast-BUNDLE sensor-path Cisco-IOS-XR-bundlemgr-oper:bundles/bundles/bundle
+    !
+    telemetry model-driven sensor-group Comcast-ENTITY
+    telemetry model-driven sensor-group Comcast-ENTITY sensor-path Cisco-IOS-XR-sysadmin-envmon-ui:/environment
+    !
+    telemetry model-driven sensor-group Comcast-MEMORY
+    !
+    telemetry model-driven sensor-group Comcast-SYSTEM
+    telemetry model-driven sensor-group Comcast-SYSTEM sensor-path Cisco-IOS-XR-snmp-agent-oper:snmp/information/system-oid
+    telemetry model-driven sensor-group Comcast-SYSTEM sensor-path Cisco-IOS-XR-snmp-agent-oper:snmp/information/system-descr
+    telemetry model-driven sensor-group Comcast-SYSTEM sensor-path Cisco-IOS-XR-snmp-agent-oper:snmp/information/system-up-time
+    !
+    telemetry model-driven sensor-group Comcast-INTERFACES
+    telemetry model-driven sensor-group Comcast-INTERFACES sensor-path openconfig-interfaces:interfaces/interface
+    telemetry model-driven sensor-group Comcast-INTERFACES sensor-path Cisco-IOS-XR-bundlemgr-oper:bundle-information
+    telemetry model-driven sensor-group Comcast-INTERFACES sensor-path Cisco-IOS-XR-pfi-im-cmd-oper:interfaces/interface-xr/interface
+    telemetry model-driven sensor-group Comcast-INTERFACES sensor-path Cisco-IOS-XR-infra-statsd-oper:infra-statistics/interfaces/interface/latest/generic-counters
+    !
+    telemetry model-driven subscription SubSNP
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-BGP sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-CDP sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-CPU sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-QOS sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-TCP sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-UDP sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-ICMP sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-IPv4 sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-IPv6 sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-LLDP sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-OSPF sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-SNMP sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-BUNDLE sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-ENTITY sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-MEMORY sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-SYSTEM sample-interval 60000
+    telemetry model-driven subscription SubSNP sensor-group-id Comcast-INTERFACES sample-interval 60000
+    telemetry model-driven subscription SubSNP destination-id DGroupSNP
+    !
+    !
+    "
+  }],
+  "device" : {
+    "make" : "cisco",
+    "model" : "ASR-9006-DC-V2"
+  },
+  "requestId": "5ba586a7-451d-4c5e-b9e0-b455376d2cda"
+}
